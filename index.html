@@ -1,0 +1,248 @@
+<html>
+  <head>
+    <title>Your backend is broken</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-size: 20px;
+        padding-bottom: 600px;
+        width: 1024px;
+        margin: auto;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        padding: 10px;
+        text-align: right;
+        background: white;
+      }
+      .btn {
+        display: inline-block;
+        background: white;
+        border: 2px solid #333;
+        padding: 15px 25px;
+        border-radius: 10%;
+        text-decoration: none;
+        color: #333; 
+      }
+      header,
+      section {
+        text-align: center;
+      }
+      header {
+        padding: 200px 0 200px 0;
+      }
+      section {
+        padding: 200px 0;
+      }
+      section ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+      ul li {
+        padding: 5px 0;
+      }
+      .left-right-cells {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-bottom: 40px;
+      }
+      .left-right-cells > div {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="btn" href="#fixit">Fix my backend</a>
+      <a class="btn">I'd like a free demo</a>
+    </nav>
+    <header>
+      <h1>
+        ⚠️ Your backend is broken! ⚠️<br/>
+        <small>Hopefully, you can fix it</small>
+      </h1>
+      <p><a href="#diagnosis">Read more</a></p>
+      <p></p><a href="#diagnosis">Fix it</a></p>
+    </header>
+    <section id="diagnosis">
+      <div class="left-right-cells">
+        <div>
+          <h2>Most backends</h2>
+          <ul>
+            <li>Do not prevent reaching broken software states</li>
+            <li>Allow deadly attacks, such as SQL injections</li>
+            <li>More generally, do not sanitize their input</li>
+            <li>Have no decent black-box test suite</li>
+            <li>Are not properly documented</li>
+            <li>Prevent risk-free refactorings</li>
+          </ul>
+        </div>
+        <div>
+          <h2>A broken backend</h2>
+          <ul>
+            <li>Slows your software team & your business down</li>
+            <li>Eventually forces you to rewrite everything</li>
+            <li>Breaks experience & makes users angry</li>
+            <li>Costs you thousands of $ per year</li>
+            <li>Puts your company at risk</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        <a class="btn" href="#fixit">Fix my backend</a>
+      </p>
+    </section>
+    <section id="fixit">
+      <div>
+        <h2>How do I fix my backend?</h2>
+        <ul>
+          <li>Build a developer-friendly web service catalogue</li>
+          <li>Turn it to a black-box functional test suite</li>
+          <li>Add robustness & non-regression tests</li>
+          <li>Automatically check input sanitization</li>
+          <li>Discover & fix security weaknesses</li>
+        </ul>
+        <p>
+          <a class="btn">Clone our github example</a>
+        </p>
+      </div>
+    </section>
+    <section id="built-for-dev">
+      <h2>Built by developers, for developers</h2>
+      <div class="left-right-cells">
+        <div>
+          <h3>✔️ Dev Friendly</h3>
+          <ul>
+            <li>Human-friendly API specs</li>
+            <li>Compatible with git versionning</li>
+          </ul>
+        </div>
+        <div>
+          <h3>✔️ Incremental</h3>
+          <ul>
+            <li>No need to map all your API at once</li>
+            <li>Start small, improve continuously</li>
+          </ul>
+        </div>
+        <div>
+          <h3>✔️ DevOps</h3>
+          <ul>
+            <li>Ready-to-use docker containers</li>
+            <li>Easy to integrate to continuous build</li>
+          <ul>
+        </div>
+      </div>
+      <div class="left-right-cells">
+        <div>
+          <h3>✔️ Open Source</h3>
+          <ul>
+            <li>Available on github</li>
+            <li>Contributions welcome</li>
+          <ul>
+        </div>
+      </div>
+      <p>
+        <a class="btn" href="#fixit">Fix my backend</a>
+      </p>
+    </section>
+    <section id="how-is-that-different">
+      <h2>How is that different from alternatives?</h2>
+      <div class="left-right-cells">
+        <div>
+          <h3>Formal data schema</h3>
+          <ul>
+            <li>Powerful & easy to use data constraints</li>
+            <li>Thanks to <a href="finitio.io" target="_blank">finitio.io</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>State management</h3>
+          <ul>
+            <li>Black-box testing with state support</li>
+            <li>Easily tunable to your situation</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Design by contract</h3>
+          <ul>
+            <li>Web service PRE/POST conditions</li>
+            <li>Example & counterexample generation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="left-right-cells">
+        <div>
+          <h3>✔️ Technology agnostic</h3>
+          <ul>
+            <li>Independent test framework</li>
+            <li>Backend in node.js, ruby, java, scala, PHP, etc.</li>
+          <ul>
+        </div>
+      </div>
+      <p>
+        <a class="btn">Book a demo</a>
+      </p>
+    </section>
+    <section id="extras">
+      <h2>Comes with lots of extra sugar</h2>
+      <div class="left-right-cells">
+        <div>
+          <h3>✔️ API reverse engineering</h3>
+          <ul>
+            <li>Auto discover existing web services</li>
+            <li>Generate input & output schema</li>
+          </ul>
+        </div>
+        <div>
+          <h3>✔️ Auto mock</h3>
+          <ul>
+            <li>Turn your catalogue to a mock API</li>
+            <li>Help frontend - backend teams align</li>
+          </ul>
+        </div>
+        <div>
+          <h3>✔️ Shield & Monitor</h3>
+          <ul>
+            <li>Sanitize input as a service</li>
+            <li>Get API monitoring for free</li>
+          <ul>
+        </div>
+      </div>
+      <p>
+        <a class="btn">Contact us</a>
+      </p>
+    </section>
+    <section id="not-ready">
+      <h2>What if my stack or team is not ready?</h2>
+      <div class="left-right-cells">
+        <div>
+          <h3>✔️ Mature your DevOps practices</h3>
+          <ul>
+            <li>Docker introduction for your team</li>
+            <li>We help with continuous integration</li>
+            <li>We do it for you, or with you!</li>
+          </ul>
+        </div>
+        <div>
+          <h3>✔️ Mature your test practices</h3>
+          <ul>
+            <li>Introduction to black-box API testing</li>
+            <li>We take the first steps with you</li>
+            <li>We stay available for advanced testing scenarios</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        <a class="btn">Contact us</a>
+      </p>
+    </section>
+  </body>
+</html>
