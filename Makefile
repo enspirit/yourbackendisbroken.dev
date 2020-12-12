@@ -14,16 +14,13 @@ broken.html: pages/* pages/partials/* pages/layouts/*
 get-our-help.html: pages/* pages/partials/* pages/layouts/*
 	bin/i pages/get-our-help.html > get-our-help.html
 
-features.html: pages/* pages/partials/* pages/layouts/*
-	bin/i pages/features.html > features.html
-
 tutorial.html: pages/* pages/partials/* pages/layouts/*
 	bin/i pages/tutorial.html > tutorial.html
 
 extra-goodies.html: pages/* pages/partials/* pages/layouts/*
 	bin/i pages/extra-goodies.html > extra-goodies.html
 
-html: index.html waiting.html broken.html get-our-help.html features.html tutorial.html extra-goodies.html
+html: index.html waiting.html broken.html get-our-help.html tutorial.html extra-goodies.html
 
 index.css: style/* style/shared/* style/pages/*
 	sass style/index.scss > index.css

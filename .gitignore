@@ -1,5 +1,6 @@
 Dockerfile.log
 Dockerfile.built
+Dockerfile.pushed
 .env
 /*.html
 /index.css
