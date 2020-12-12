@@ -1,0 +1,8 @@
+body.extra-goodies {
+  nav > a.extra-goodies {
+    @include active-nav;
+  }
+  &:before {
+    @include bottom-right-square;
+  }
+}

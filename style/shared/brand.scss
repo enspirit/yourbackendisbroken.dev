@@ -1,0 +1,17 @@
+$bg-from: rgba(255,133,27,1);
+$bg-to: rgba(255,80,27,1);
+$main-color: #FF851B;
+$text-color: #001F3F;
+$grey-heading: lighten($text-color, 10%);
+
+$bg-from: lighten(rgba(176,13,201,1), 10%);
+$bg-to: lighten(rgba(107,7,122,1), 10%);
+$main-color: #F012BE;
+
+@import url('https://fonts.googleapis.com/css2?family=Judson&family=Quando&display=swap');
+$text-font: 'Judson';
+$heading-font: 'Quando';
+
+.antiquewhite {
+  color: antiquewhite;
+}

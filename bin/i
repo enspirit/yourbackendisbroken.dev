@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'path'
+  gem 'wlang', '~> 2.3'
+end
+require 'path'
+require 'wlang'
+
+root = Path.dir.parent
+html = root/"pages/layouts/html5.html"
+page = root/ARGV[0]
+
+partials = (root/"pages/partials").glob("*.html").each_with_object({}) do |pf,h|
+  h[pf.basename.rm_ext.to_s] = pf.read
+end
+
+page_html = WLang::Html.render(page.read, partials)
+rendered  = WLang::Html.render(html.read, {
+  yield: page_html,
+  body_class: page.basename.rm_ext.to_s
+})
+puts rendered

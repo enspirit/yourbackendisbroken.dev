@@ -2,4 +2,3 @@ Dockerfile.log
 Dockerfile.built
 .env
 Jenkinsfile
-Makefile

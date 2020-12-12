@@ -1,0 +1,121 @@
+html {
+  font-size: 18px !important;
+  font-family: $text-font, serif;
+  color: $text-color;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $heading-font, serif;
+  padding: 10px 0;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+h3 {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  color: $grey-heading;
+}
+
+p,
+ul,
+ul > li {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+header,
+section,
+footer {
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 40px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px 20px;
+  text-align: right;
+  background-color: white;
+  color: $main-color;
+  border-bottom-left-radius: 10px;
+  font-size: 1.4em;
+  > a,
+  > a:visited {
+    padding: 10px 0px;
+    margin: 0 10px;
+    color: $main-color;
+  }
+  > a:hover {
+    color: darken($main-color, 25%);
+    cursor: pointer;
+  }
+}
+
+@mixin active-nav {
+  border-bottom: 2px solid $main-color;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Quando', serif;
+  letter-spacing: -1px;
+}
+
+.btn {
+  padding: 20px 30px;
+  background: white;
+  color: $main-color;
+  border-radius: 10px;
+  outline: none;
+  border: 3px solid $main-color;
+  &.no-border {
+    border: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  > li {
+    padding: 5px 0;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+input:not([type="submit"]) {
+  padding: 10px 15px;
+  background: white;
+  border-radius: 10px;
+  font-family: $text-font;
+  font-size: 22px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

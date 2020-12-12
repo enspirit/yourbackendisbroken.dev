@@ -1,0 +1,21 @@
+body.tutorial {
+  nav > a.tutorial {
+    @include active-nav;
+  }
+  &:before {
+    @include top-middle-square;
+  }
+  ol {
+    font-size: 1.6em;
+    > li {
+      margin-bottom: 5px;
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    p {
+      padding: 0 60px;
+    }
+  }
+}

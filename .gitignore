@@ -1,3 +1,5 @@
 Dockerfile.log
 Dockerfile.built
 .env
+/*.html
+/index.css

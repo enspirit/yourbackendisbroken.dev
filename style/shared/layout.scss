@@ -1,0 +1,19 @@
+header {
+  padding: 300px 0 250px 0;
+}
+section {
+  max-width: 1280px;
+  padding: 280px 20px;
+  margin: auto;
+}
+
+.left-right-cells {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.left-right-cells > div {
+  padding: 20px;
+}
