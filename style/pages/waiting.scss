@@ -1,26 +1,14 @@
 body.waiting {
-  &:before {
-    @include square;
-    top: 50%;
-    left: 50%;
-    margin-left: -800px;
-    margin-top: -800px;
-    width: 1600px;
-    height: 1600px;
-    margin-top: 300px;
+  nav > a.waiting {
+    @include active-nav;
   }
   footer {
     p {
       color: white;
-      font-size: 1.2em;
       max-width: 500px;
       margin: 20px auto;
     }
-    input[type="email"] {
-      width: 350px;
-    }
     input[type="submit"] {
-      font-size: 100%;
       display: inline-block;
       margin-top: 20px;
     }

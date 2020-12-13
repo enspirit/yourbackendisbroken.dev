@@ -1,0 +1,49 @@
+@media (max-width: 1023px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+  body {
+    padding: 0 15px;
+  }
+  nav {
+    left: 0;
+    opacity: 0.9;
+  }
+  header {
+    padding: 100px 0;
+  }
+  footer {
+    input[type="email"] {
+      width: 85%;
+    }
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  .btn {
+    padding: 15px 20px;
+  }
+  .nomobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 300px 0 250px 0;
+  }
+  section {
+    max-width: 1280px;
+    padding: 280px 20px;
+    margin: auto;
+  }
+  footer {
+    input[type="email"] {
+      width: 350px;
+    }
+  }
+  .btn {
+    padding: 20px 30px;
+  }
+}

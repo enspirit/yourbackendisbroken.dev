@@ -1,7 +1,10 @@
-html {
-  font-size: 18px !important;
+html,
+body {
+  font-size: 18px;
   font-family: $text-font, serif;
   color: $text-color;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -16,6 +19,7 @@ h1 {
 }
 h2 {
   font-size: 1.6em;
+  line-height: 1.25;
   font-weight: bold;
   margin-bottom: 1em;
 }
@@ -26,9 +30,14 @@ h3 {
 }
 
 p,
-ul,
-ul > li {
-  font-size: 1.1em;
+li,
+input {
+  font-family: $text-font;
+  font-size: 1.25em;
+}
+
+p,
+li {
   margin-bottom: 5px;
 }
 
@@ -37,7 +46,6 @@ section,
 footer {
   text-align: center;
 }
-
 footer {
   position: fixed;
   width: 100%;
@@ -81,7 +89,6 @@ a {
 }
 
 .btn {
-  padding: 20px 30px;
   background: white;
   color: $main-color;
   border-radius: 10px;
@@ -112,8 +119,6 @@ input:not([type="submit"]) {
   padding: 10px 15px;
   background: white;
   border-radius: 10px;
-  font-family: $text-font;
-  font-size: 22px;
   border: none;
   &:focus {
     outline: none;
