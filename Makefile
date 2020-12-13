@@ -20,7 +20,10 @@ tutorial.html: pages/* pages/partials/* pages/layouts/*
 extra-goodies.html: pages/* pages/partials/* pages/layouts/*
 	bin/i pages/extra-goodies.html > extra-goodies.html
 
-html: index.html waiting.html broken.html get-our-help.html tutorial.html extra-goodies.html
+why.html: pages/* pages/partials/* pages/layouts/*
+	bin/i pages/why.html > why.html
+
+html: index.html waiting.html broken.html get-our-help.html tutorial.html extra-goodies.html why.html
 
 index.css: style/* style/shared/* style/pages/*
 	sass style/index.scss > index.css
