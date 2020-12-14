@@ -1,0 +1,18 @@
+image: enspirit/yourbackendisbroken
+
+# Workspace startup
+tasks:
+  - init: supervisord
+    command: clear && gp await-port 3000 && bin/start
+
+# Ports to expose on workspace
+ports:
+  - name: api
+    port: 3000
+    onOpen: ignore
+  - name: frontail
+    port: 9001
+    onOpen: ignore
+  - name: tutorial
+    port: 8080
+    onOpen: open-preview

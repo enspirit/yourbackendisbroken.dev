@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>tail -f -</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/frontail/styles/default.css">
+  <link rel="icon" href="/frontail/favicon.ico">
+  <style>
+    body {
+      padding-top: 10px !important;
+    }
+
+    .navbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="topbar navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9">
+          <span class="navbar-brand" title="-">tail -f -</span>
+          <div class="text-right">
+            <button type="button" class="btn btn-light btn-pause" data-toggle="button" aria-pressed="false"
+              autocomplete="off"></button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <form class="navbar-form-custom" role="search" onkeypress="return event.keyCode != 13;">
+            <input type="text" class="form-control query" placeholder="Filter" tabindex="1">
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid no-horiz-padding">
+    <pre class="log"></pre>
+  </div>
+
+
+  <script src="/frontail/socket.io/socket.io.js"></script>
+  <script src="/frontail/tinycon.min.js"></script>
+  <script src="/frontail/ansi_up.js"></script>
+  <script src="/frontail/app.js"></script>
+  <script type="text/javascript">
+    var socket = new io.connect('/336d5ebc5436534e61d16e63ddfca327', {
+      path: '/frontail/socket.io',
+      transports: ['websocket']
+    });
+
+    window.load = App.init({
+      socket: socket,
+      container: document.getElementsByClassName('log')[0],
+      filterInput: document.getElementsByClassName('query')[0],
+      pauseBtn: document.getElementsByClassName('btn-pause')[0],
+      topbar: document.getElementsByClassName('topbar')[0],
+      body: document.getElementsByTagName('body')[0]
+    });
+  </script>
+</body>
+
+</html>
