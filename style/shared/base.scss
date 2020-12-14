@@ -46,7 +46,7 @@ section,
 footer {
   text-align: center;
 }
-footer {
+.footer {
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -55,7 +55,7 @@ footer {
   padding-bottom: 40px;
 }
 
-nav {
+.main-nav {
   position: fixed;
   top: 0;
   right: 0;

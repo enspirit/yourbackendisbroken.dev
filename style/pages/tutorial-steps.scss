@@ -1,0 +1,26 @@
+.tutorials {
+  padding: 100px 20px;
+  display: grid;
+  grid-template-areas:
+    "tutorial-nav tutorial-main"
+    "tutorial-nav tutorial-footer";
+  grid-template-columns: 2fr 10fr;
+  &-nav {
+    grid-area: tutorial-nav;
+    text-align: left;
+    a,
+    a:visited {
+      color: grey;
+    }
+
+    a:hover {
+      color: #7B0861;
+    }
+  }
+  &-main {
+    grid-area: tutorial-main;
+  }
+  &-footer {
+    grid-area: tutorial-footer;
+  }
+}
