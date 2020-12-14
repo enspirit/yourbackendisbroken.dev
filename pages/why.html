@@ -1,51 +1,53 @@
 >{waiting_nav}
 <section>
   <h1>Let's improve all backends</h1>
-  <p>As we continuously worked on software for years, we came to the conclusion
-     that many teams could improve their software quality through better
-     design & black-box testing of backend components.</p>
-  <h2>A backend is broken when &hellip;</h2>
+  <p>As we continuously work on software for years, we come to the conclusion
+     that many teams could improve the quality of their software through a
+     better design and black-box testing of backend components.</p>
+  <h2>In our opinion, a backend is broken when &hellip;</h2>
   <ol>
     <li>It becomes harder and harder to maintain and make evolve,</li>
     <li>or breaks its clients when released,</li>
-    <li>or throws 500 errors when something is unexpected,</li>
+    <li>or throws 500 errors everytime something is unexpected,</li>
     <li>or exposes technical details on errors,</li>
     <li>or has recurrent performance problems,</li>
     <li>or requires looking at the code to discover the services.</li>
   </ol>
-  <h2>Hidden costs of broken backends</h2>
+  <h2>Broken backends hide important costs</h2>
   <ol>
-    <li>Your team is 10 times slower than it could be.</li>
-    <li>Your backend will eventually be rewritten from scratch.</li>
-    <li>A deadly security nightmare waits around the corner.</li>
-    <li>You miss an opportunity to think clearly about your software.</li>
+    <li>The software team is 10 times slower than it could be.</li>
+    <li>By lack of quality, the backend will eventually be rewritten from scratch.</li>
+    <li>A deadly security nightmare tends to wait around the corner.</li>
+    <li>The lack of black-box design is a missed opportunity to think clearly about requirements.</li>
   </ol>
-  <h2>Testing is incomplete in most teams</h2>
+  <h2>We observed that testing is incomplete in most teams</h2>
   <ol>
-    <li>Unit tests are fined-grained, and may be too brittle.</li>
-    <li>Integration testing is technically hard, most teams skip it.</li>
+    <li>Unit tests are often used, but are fined-grained and are sometimes brittle.</li>
+    <li>Integration testing has unclear boundaries, and most teams skip them.</li>
     <li>End-to-end testing is often slow, and focuses on best case scenarios.</li>
     <li>Functional black-box testing is ... generally unknown.</li>
   </ol>
-  <h2>Web services offer an opportunity to improve quality</h2>
+  <h2>Web services offer an opportunity to improve software quality</h2>
   <ol>
-    <li>Web services correspond to high-level software operations.</li>
-    <li>They offer a natural space for stable design.</li>
-    <li>Being public by nature, they call for robustness & security analysis.</li>
-    <li>The HTTP protocol is standard and technology agnostic.</li>
+    <li>Web services correspond to high-level software operations, and are therefore close to requirements.</li>
+    <li>Thereby, they offer a great space for clear thinking and stable design.</li>
+    <li>Being a public API by nature, web services call for robustness & security analysis.</li>
+    <li>The HTTP protocol they all rely one is standard, rich enough, and technology agnostic.</li>
   </ol>
-  <h2>We provide an open-source framework where&hellip;</h2>
+  <h2>Based on those observations, we provide here an open-source framework where&hellip;</h2>
   <ol>
-    <li>Web services are specified in a friendly, yet formal way.</li>
+    <li>Web services are specified in a simple, human-friendly, yet formal way.</li>
     <li>Checking if they meet their specification is as easy as using <code>curl</code>.</li>
     <li>PRE/POST contracts provide systematic testing coverage.</li>
-    <li>A specification can also be used for documentation, API mocking, code generation, etc.</li>
+    <li>A specification can also be turned to documentation, or used for API mocking, code generation, etc.</li>
   </ol>
-  <h2>It's different from existing alternatives</h2>
+  <h2>We think it is complementary to existing alternatives</h2>
   <ol>
-    <li>Our first focus is on testing & quality, not documentation or UI tools.</li>
-    <li>Specifications are independent from the implementation, not derived from it.</li>
-    <li>Therefore they are human-centric, not machine-centric.</li>
-    <li>A <code>spec</code> is a <code>spec</code>, not a usage scenario.</li>
+    <li>Our focus is on software quality, through specification and testing. We see <a href="https://swagger.io/" target="_blank">swagger</a> as complementary, with a focus on documentation and UI tools.</li>
+    <li>Also, we think that specifications must be independent from the implementation, not derived from it like with <a href="https://swagger.io/openapi/" target="_blank">openapi</a>.</li>
+    <li>We share with <a href="https://cucumber.io/" target="_blank">cucumber</a> the wish to be human-centric, not machine-centric.</li>
+    <li>We want to fix an element of vocabulary, by distinguishing a <code>spec</code> from its <code>tests</code>.</li>
+    <li>We stress the fact that functional testing is not about running happy scenarios, but about testing the conformance of an implementation to a <code>spec</code>.</li>
   </ol>
+  <h2>We hope you'll enjoy it, and welcome contributions, ideas, and critics.</h2>
 </section>
