@@ -4,3 +4,5 @@ Dockerfile.pushed
 .env
 /*.html
 /index.css
+
+.sass-cache
