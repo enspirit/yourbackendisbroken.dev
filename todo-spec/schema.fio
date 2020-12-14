@@ -1,0 +1,6 @@
+@import finitio/data
+
+ApiVersionInfo = {
+  name: String
+  version: String
+}

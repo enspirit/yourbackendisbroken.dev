@@ -1,0 +1,32 @@
+---
+name: |-
+  Version
+
+url: |-
+  /version
+
+services:
+- method: |-
+    GET
+
+  description: |-
+    Returns metadata regarding the API version
+
+  input_schema: |-
+    .
+
+  output_schema: |-
+    ApiVersionInfo
+
+  error_schema: |-
+    .
+
+  examples:
+
+    - description: |-
+        when requested
+      expected:
+        content_type: application/json
+        status: 200
+      assert:
+        - "pathFD('', version: '0.0.1', name: 'TODOS API')"
