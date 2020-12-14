@@ -1,5 +1,4 @@
-body.index,
-body.waiting {
+body.index {
   &:before {
     @include bottom-square;
   }

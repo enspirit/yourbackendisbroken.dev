@@ -5,12 +5,6 @@ DOCKER_REGISTRY := $(or ${DOCKER_REGISTRY},${DOCKER_REGISTRY},docker.io)
 index.html: pages/* pages/partials/* pages/layouts/*
 	bin/i pages/index.html > index.html
 
-waiting.html: pages/* pages/partials/* pages/layouts/*
-	bin/i pages/waiting.html > waiting.html
-
-broken.html: pages/* pages/partials/* pages/layouts/*
-	bin/i pages/broken.html > broken.html
-
 get-our-help.html: pages/* pages/partials/* pages/layouts/*
 	bin/i pages/get-our-help.html > get-our-help.html
 
@@ -23,7 +17,7 @@ extra-goodies.html: pages/* pages/partials/* pages/layouts/*
 why.html: pages/* pages/partials/* pages/layouts/*
 	bin/i pages/why.html > why.html
 
-html: index.html waiting.html broken.html get-our-help.html tutorial.html extra-goodies.html why.html
+html: index.html get-our-help.html tutorial.html extra-goodies.html why.html
 
 index.css: style/* style/shared/* style/pages/*
 	sass style/index.scss > index.css
