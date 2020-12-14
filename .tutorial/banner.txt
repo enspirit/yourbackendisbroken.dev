@@ -1,0 +1,22 @@
+██╗    ██╗███████╗██████╗ ███████╗██████╗ ██╗ ██████╗██╗   ██╗
+██║    ██║██╔════╝██╔══██╗██╔════╝██╔══██╗██║██╔════╝╚██╗ ██╔╝
+██║ █╗ ██║█████╗  ██████╔╝███████╗██████╔╝██║██║      ╚████╔╝
+██║███╗██║██╔══╝  ██╔══██╗╚════██║██╔═══╝ ██║██║       ╚██╔╝
+╚███╔███╔╝███████╗██████╔╝███████║██║     ██║╚██████╗   ██║
+ ╚══╝╚══╝ ╚══════╝╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═════╝   ╚═╝
+
+Welcome to this tutorial!
+
+We have tried to make it easy for you to browse this git,
+the following commands are available for you:
+
+- next: moves to the next step of this tutorial
+- previous: moves to the previous step
+- reset: go back to the beginning of the tutorial
+
+Point your browser to http://localhost:8080/ to follow the tutorial.
+The API, on the other hand, is running on http://localhost:3000.
+
+Enjoy ;-)
+
+
