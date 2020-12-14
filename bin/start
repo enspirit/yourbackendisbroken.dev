@@ -3,5 +3,6 @@
 docker run -it \
   -p 3000:3000 \
   -p 8080:80 \
+  -p 9001:9001 \
   -v $PWD:/ybib \
   ybib-tutorial:latest bash

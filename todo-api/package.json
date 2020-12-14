@@ -3,7 +3,7 @@
   "description": "PoC Dec. 2020 - NodeJS version of the API",
   "version": "0.0.1",
   "scripts": {
-    "start": "babel-watch src/index.js | frontail -",
+    "start": "babel-watch src/index.js 2>&1 | frontail -",
     "test": "mocha --reporter=mocha-junit-reporter --require @babel/register --recursive --reporter-options mochaFile=tests/test-results.xml tests",
     "test:coverage": "nyc --reporter=cobertura mocha --require @babel/register --recursive tests",
     "test:watch": "mocha --require @babel/register --recursive --watch tests",
