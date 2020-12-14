@@ -1,6 +1,6 @@
 FROM enspirit/webspicy
 
-RUN apk add bash curl nginx supervisor netcat-openbsd nodejs nodejs-npm
+RUN apk add bash git curl nginx supervisor netcat-openbsd nodejs nodejs-npm
 
 # disable warnings in ruby
 ENV RUBYOPT="-W0"
