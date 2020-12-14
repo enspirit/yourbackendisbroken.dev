@@ -1,0 +1,32 @@
+#!/bin/bash
+
+echo "Waiting for API to start..."
+timeout 10 bash -c 'until printf "" 2>>/dev/null >>/dev/tcp/$0/$1; do sleep 1; done' localhost 3000
+
+if [ $? -gt 0 ]; then
+  echo "API unreachable ..."
+  exit
+fi
+
+clear
+cat .tutorial/banner.txt
+
+cat <<-EOF
+Welcome to this tutorial!
+
+We have tried to make it easy for you to browse this git,
+the following commands are available for you:
+
+- bin/next: moves to the next step of this tutorial
+- bin/previous: moves to the previous step
+
+The API is running on http://localhost:3000
+EOF
+
+if [ ! -z "$DOCKER_ENV" ]; then
+  cat <<-EOF
+Point your browser to http://localhost:8080 to follow the tutorial.
+EOF
+fi
+
+echo ""

@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/.theia": true,
+    "node_modules": true,
+    "**/.tutorial": true,
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.gitpod*": true
+  }
+}

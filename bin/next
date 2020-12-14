@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git reset --hard HEAD
+git log --reverse --pretty=%H nodejs-tuto | awk "/$(git rev-parse HEAD)/{getline;print}" | xargs git checkout
+
+if [ -e $GITPOD_REPO_ROOT/.tutorial/start.sh ]; then
+  $GITPOD_REPO_ROOT/.tutorial/start.sh
+fi;
