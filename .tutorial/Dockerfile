@@ -1,13 +1,6 @@
 FROM enspirit/webspicy
 
-# install curl, nginx, supervisor, netcat, node
-RUN apt-get update && \
-  apt-get install -y curl nginx supervisor netcat && \
-  curl -sL https://deb.nodesource.com/setup_14.x | bash && \
-  apt-get install -y nodejs && \
-  apt-get clean autoclean && \
-  apt-get autoremove --yes && \
-  rm -rf /var/lib/{apt,dpkg,cache,log}/
+RUN apk add bash curl nginx supervisor netcat-openbsd nodejs nodejs-npm
 
 # disable warnings in ruby
 ENV RUBYOPT="-W0"
@@ -22,7 +15,7 @@ ENV PATH="$PATH:/opt/node_deps/node_modules/.bin"
 WORKDIR /ybib
 
 # Supervisord, entrypoint, scripts, ...
-COPY .tutorial/supervisord.conf /etc/supervisor/conf.d/
+COPY .tutorial/supervisord.conf /etc/
 COPY .tutorial/entrypoint.sh /
 COPY bin/* /usr/bin/
 COPY .tutorial/banner.txt /etc/banner.txt
