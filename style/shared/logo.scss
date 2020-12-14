@@ -1,0 +1,13 @@
+.logo {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  top: 25px;
+  left: 20px;
+  > a {
+    display: inline;
+    > svg {
+      fill: $grey-heading;
+    }
+  }
+}
