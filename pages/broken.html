@@ -1,0 +1,64 @@
+>{nav}
+<section>
+  <div class="left-right-cells">
+    <div>
+      <h2>Most backends</h2>
+      <ul>
+        <li>Do not prevent reaching broken software states</li>
+        <li>Lack sanitization, allowing deadly attacks</li>
+        <li>Have no decent black-box test suite</li>
+        <li>Are not properly documented</li>
+        <li>Prevent risk-free refactoring</li>
+      </ul>
+    </div>
+    <div>
+      <h2>A broken backend</h2>
+      <ul>
+        <li>Slows down both your dev team & business</li>
+        <li>Eventually forces you to rewrite everything</li>
+        <li>Breaks experience & makes users angry</li>
+        <li>Costs you thousands of $ per year</li>
+        <li>Puts your company at risk</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>
+    <a class="btn no-border scroll-to-bottom">Yep, can I use your tool?</a>
+  </p>
+  <p style="display: none" class="get-started">
+    <a class="btn no-border" href="tutorial.html">Get started</a>
+  </p>
+  <script>
+    $(function() {
+      $('.scroll-to-bottom').click(function () {
+        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+        $(".scroll-to-bottom").hide();
+        $(".get-started").show();
+      });
+    });
+  </script>
+</footer>
+<section>
+  <div class="left-right-cells">
+    <div>
+      <h2>Is your backend</h2>
+      <ul>
+        <li></li>
+        <li>not as robust as you'd like?</li>
+        <li>not secure enough?</li>
+        <li>becoming impossible to change?</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Your team</h2>
+      <ul>
+        <li>Knows Docker (or wishes to learn)!</li>
+        <li>Knows HTTP basics!</li>
+        <li>Knows Linux!</li>
+        <li>Loves quality!</li>
+      </ul>
+    </div>
+  </div>
+</section>

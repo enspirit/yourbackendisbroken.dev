@@ -16,5 +16,3 @@ FROM nginx:alpine
 
 COPY --from=html /app/*.html /app/scripts/ /usr/share/nginx/html/
 COPY --from=css /app/*.css /usr/share/nginx/html/
-
-COPY --from=html /app/index.html /usr/share/nginx/html/welcome.html
