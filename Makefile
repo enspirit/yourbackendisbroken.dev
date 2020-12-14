@@ -54,3 +54,9 @@ run: image
 
 dev:
 	docker run -v $$PWD:/usr/share/nginx/html/ -p 8080:80 enspirit/yourbackendisbroken
+
+hack-image:
+	docker build -t enspirit/yourbackendisbroken-hack --file Dockerfile.hack .
+
+hack: hack-image
+	docker run -it -v $$PWD:/app enspirit/yourbackendisbroken-hack bash
