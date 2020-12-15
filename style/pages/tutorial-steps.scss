@@ -21,9 +21,76 @@
   &-main {
     grid-area: tutorial-main;
     text-align: left;
+    h2 {
+      margin-top: 3em;
+      &:first-of-type {
+        margin-top: 1em;
+      }
+    }
+    p {
+      margin: 15px 0;
+    }
   }
   &-footer {
     grid-area: tutorial-footer;
+  }
+
+  summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  details[open] {
+    background-color: lighten($dark-background, 33%);
+    border-left: 10px solid lighten($dark-background, 25%);
+    padding: 20px 10px;
+    padding-left: 37px;
+    summary {
+      margin-left: -37px;
+    }
+  }
+
+  summary {
+    margin-bottom: .5em;
+  }
+
+  details {
+    padding: 20px;
+    border-bottom: 1px solid lighten($dark-background, 25%);
+    &:first-of-type {
+      border-top: 1px solid lighten($dark-background, 25%);
+    }
+  }
+
+  pre code {
+    background-color: whitesmoke;
+    color: $dark-background;
+    width: 90%;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 15px 0;
+    overflow: hidden;
+    font-size: 1.25em;
+    &:hover {
+      &:after {
+        content: "Copy";
+        position: absolute;
+        right: 0;
+        top: -1px;
+        background-color: lighten($dark-background, 20%);
+        color: white;
+        padding: 3px 6px;
+        cursor: pointer;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+    }
   }
 }
 
@@ -35,68 +102,11 @@
   }
 }
 
-pre code {
-  background-color: whitesmoke;
-  color: $dark-background;
-  width: 90%;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin: 10px 0;
-  overflow: hidden;
-  &:hover {
-    &:after {
-      content: "Copy";
-      position: absolute;
-      right: 0;
-      top: -1px;
-      background-color: lighten($dark-background, 20%);
-      color: white;
-      padding: 3px 6px;
-      cursor: pointer;
-      border-top-right-radius: 4px;
-      border-bottom-left-radius: 4px;
-    }
-  }
-}
-
 footer.tutorials-footer {
   display: flex;
   justify-content: space-between;
   margin-top: 30;
   .next {
     margin-left: auto;
-  }
-}
-
-summary {
-  font-weight: bold;
-  margin: -.5em -.5em 0;
-  padding: .5em;
-  outline: none;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-details[open] {
-  background-color: lighten($dark-background, 33%);
-  border-left: 10px solid lighten($dark-background, 25%);
-  padding: 20px 10px;
-  padding-left: 37px;
-  summary {
-    margin-left: -37px;
-  }
-}
-
-details[open] summary {
-  margin-bottom: .5em;
-}
-
-details {
-  padding: 20px;
-  border-bottom: 1px solid lighten($dark-background, 25%);
-  &:first-of-type {
-    border-top: 1px solid lighten($dark-background, 25%);
   }
 }
