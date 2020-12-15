@@ -33,8 +33,7 @@ pipeline {
     stage ('Pushing Docker Images') {
       when {
         anyOf {
-          branch 'nodejs-tuto'
-          branch 'master'
+          branch 'website'
         }
       }
       steps {
