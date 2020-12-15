@@ -60,3 +60,6 @@ hack-image:
 
 hack: hack-image
 	docker run -it -v $$PWD:/app enspirit/yourbackendisbroken-hack bash
+
+tuto-steps/%.html: tuto-steps/%.md
+	bin/m $< > $@
