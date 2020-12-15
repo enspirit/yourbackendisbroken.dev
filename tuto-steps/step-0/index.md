@@ -13,9 +13,9 @@ $ webspicy --help
 
 We provide a [Gitpod](https://www.gitpod.io/) development environment that runs inside your browser. You don't have to install anything, just click the link below:
 
-[Run webspicy tutorial on Gitpod](https://www.gitpod.io/...)
+The tutorial instructions are fully integrated in the Gitpod experience:
 
-The tutorial instructions are fully integrated in the Gitpod experience, you can close this website and focus on what's happening there.
+[![Run tutorial on Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/enspirit/yourbackendisbroken.dev/tree/nodejs-tuto)
 
 ## Use our docker image
 
@@ -24,10 +24,14 @@ We provide a [Docker](https://docker.io/) image that automatically clones our gi
 ```
 $ mkdir yourbackendisbroken
 $ cd yourbackendisbroken
-$ docker -p 8080:80 -v $PWD:/yourbackendisbroken run yourbackendisbroken/tutorial
+$ docker run -it --pull-always \
+  -p 3000:3000 \
+  -p 8080:80 \
+  -v $PWD:/ybib \
+  enspirit/yourbackendisbroken
 ```
 
-Keep a browser open with this website, and the docker shell next to it. Move from step to step as you progress.
+After running the command, you should be greeted by `webspicy`. The tutorial is now running on http://127.0.0.1:8080/, where some API logs are also served.
 
 ## Clone the github repository
 
