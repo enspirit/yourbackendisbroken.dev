@@ -4,12 +4,3 @@ ApiVersionInfo = {
   name: String
   version: String
 }
-
-TodoRef = {
-  id: Integer
-}
-
-TodoFull = {
-  id: Integer
-  description: String
-}
