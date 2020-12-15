@@ -1,7 +1,5 @@
 -include .env
 
-DOCKER_REGISTRY := $(or ${DOCKER_REGISTRY},${DOCKER_REGISTRY},docker.io)
-
 pages/tuto-steps/%.html: pages/tuto-steps/%.md
 	bundle exec ruby bin/m $< > $@
 
@@ -46,8 +44,7 @@ Dockerfile.built: Dockerfile $(shell find pages -type f | grep -v ".DS_Store")
 image: Dockerfile.built
 
 Dockerfile.pushed: Dockerfile.built
-	docker tag enspirit/yourbackendisbroken:website $(DOCKER_REGISTRY)/enspirit/yourbackendisbroken:website
-	docker push $(DOCKER_REGISTRY)/enspirit/yourbackendisbroken:website
+	docker push enspirit/yourbackendisbroken:website
 	touch Dockerfile.pushed
 
 push-image: Dockerfile.pushed
