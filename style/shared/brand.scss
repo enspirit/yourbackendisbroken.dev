@@ -6,10 +6,10 @@ $bg-from: lighten(rgba(176,13,201,1), 10%);
 $bg-to: lighten(rgba(107,7,122,1), 10%);
 $main-color: #5a4afe;
 $main-color-darken: darken($main-color, 25%);
-@import url('https://fonts.googleapis.com/css2?family=Judson&family=Cousine&family=Quando&display=swap');
-$text-font: 'Judson';
-$heading-font: 'Quando';
-$code-font: 'Cousine';
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat&display=swap');
+$text-font: 'Montserrat';
+$heading-font: 'Alfa Slab One';
+$code-font: 'Montserrat';
 .antiquewhite {
   color: antiquewhite;
 }

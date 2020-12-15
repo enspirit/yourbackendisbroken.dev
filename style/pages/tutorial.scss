@@ -2,9 +2,6 @@ body.tutorial {
   nav > a.tutorial {
     @include active-nav;
   }
-  &:before {
-    @include top-middle-square;
-  }
   ol {
     font-size: 1.6em;
     > li {
@@ -13,7 +10,7 @@ body.tutorial {
   }
   footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     p {
       padding: 0 60px;
     }

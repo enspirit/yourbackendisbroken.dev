@@ -18,6 +18,9 @@ h3 {
   font-family: $heading-font, serif;
   padding: 10px 0;
   margin: 1em 0;
+  code {
+    font-family: $heading-font;
+  }
 }
 h1 {
   font-size: 2.5em;
@@ -26,12 +29,10 @@ h1 {
 }
 h2 {
   font-size: 1.6em;
-  line-height: 1.25;
   font-weight: bold;
 }
 h3 {
   font-size: 1.4em;
-  line-height: 1.4em;
   color: $grey-heading;
 }
 
@@ -70,7 +71,7 @@ footer {
   padding: 20px 20px;
   text-align: center;
   background-color: $dark-background;
-  color: $main-color;
+  color: white;
   border-bottom-left-radius: 10px;
   font-size: 1.4em;
   > a,
@@ -78,7 +79,7 @@ footer {
     font-family: $heading-font;
     padding: 10px 0px;
     margin: 0 10px;
-    color: $main-color;
+    color: white;
   }
   > a:hover {
     color: $main-color-darken;
@@ -87,7 +88,7 @@ footer {
 }
 
 @mixin active-nav {
-  border-bottom: 2px solid $main-color;
+  border-bottom: 4px solid $main-color;
   &:hover {
     border-bottom-color: $main-color-darken;
   }
@@ -106,6 +107,21 @@ code {
   font-family: $code-font;
   font-size: 0.85em;
   color: $bg-to;
+  position: relative;
+  &:hover {
+    &:after {
+      content: "Copy";
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: lighten($dark-background, 20%);
+      color: white;
+      padding: 3px 6px;
+      cursor: pointer;
+      border-top-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+  }
 }
 
 .btn {
@@ -120,6 +136,16 @@ code {
   &:hover {
     cursor: pointer;
   }
+  &::before{
+		transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		content: '';
+		width: 0%;
+		height: 100%;
+		background: black;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 }
 
 ul {

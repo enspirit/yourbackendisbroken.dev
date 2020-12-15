@@ -11,7 +11,7 @@
     position: fixed;
     a,
     a:visited {
-      color: $main-color;
+      color: white;
     }
 
     a:hover {
@@ -61,6 +61,7 @@ summary {
   font-weight: bold;
   margin: -.5em -.5em 0;
   padding: .5em;
+  outline: none;
   &:hover {
     cursor: pointer;
   }

@@ -1,7 +1,4 @@
 body.index {
-  &:before {
-    @include bottom-square;
-  }
   h2 {
     font-size: 1.2em;
     font-weight: normal;
