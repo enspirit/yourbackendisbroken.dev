@@ -6,3 +6,4 @@ Dockerfile.pushed
 /index.css
 /.sass-cache
 /todo-api
+/tuto-steps/**/*.html

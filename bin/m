@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'path'
+  gem 'redcarpet'
+end
+require 'path'
+require 'redcarpet'
+
+renderer = Redcarpet::Render::HTML.new({
+  link_attributes: {
+    target: "_blank"
+  }
+})
+markdown = Redcarpet::Markdown.new(renderer, extensions = {})
+puts markdown.render(Path(ARGV[0]).read)
