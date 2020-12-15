@@ -1,6 +1,6 @@
-# Your backend is broken, developer
+# Developer... Your backend is broken.
 
-As we've continuously worked on software for years, we've come to the conclusion that many teams could improve the quality of their software through a better design and black-box testing of backend components.
+Whilst continuously worked on software for many years, we've come to the conclusion that many teams could improve the quality of their software through better design and black-box testing of backend components.
 
 This repository contains the source code of https://yourbackendisbroken.deb/, both the website and the tutorial.
 
@@ -22,7 +22,7 @@ The following docker images are built by this repository:
 
 * `enspirit/yourbackendisbroken` our interactive tutorial
 * `enspirit/yourbackendisbroken:website` for the website hosted at https://yourbackendisbroken.dev
-* `enspirit/yourbackendisbroken:htmltuto` reusable image having the static html pages for the tutorial
+* `enspirit/yourbackendisbroken:htmltuto` reusable image with the static html pages for the tutorial
 
 These images are NOT intended to be used for running webspicy itself on your own backend. Please refer to https://github.com/enspirit/webspicy and use `enspirit/webspicy` docker images instead.
 
