@@ -2,7 +2,7 @@
 
 The website is simply a .css and .html generator from partials.
 
-### Get a auto-compile every second
+### Get an auto-compile every second
 
 ```
 make hack

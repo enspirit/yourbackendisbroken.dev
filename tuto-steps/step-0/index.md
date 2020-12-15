@@ -2,7 +2,7 @@
 
 Welcome to this tutorial on black-box API testing with `webspicy`!
 
-There are three main ways to run the tutorial: Gitpod, docker, or cloning our repository. Whatever your choice, you must end up with a shell where the following commands work:
+There are three main ways to run the tutorial: Gitpod, docker, or by cloning our repository. Whatever option you choose, you will need to end up with a shell where the following commands work:
 
 ```
 $ curl http://127.0.0.1:3000/version
@@ -35,7 +35,7 @@ After running the command, you should be greeted by `webspicy`. The tutorial is 
 
 ## Clone the github repository
 
-The third alternative is to clone the tutorial repository on github. It requires a bit more work but is probably closer to what you would need to test your own backend on a developer machine.
+The third option is to clone the tutorial repository on github. It requires a bit more work, but is probably closer to what you would need to test your own backend on a developer machine.
 
 First clone the repository from github then install nodejs (for the backend example) and ruby (for `webspicy` itself):
 
