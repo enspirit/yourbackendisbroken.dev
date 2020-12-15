@@ -5,3 +5,4 @@ Dockerfile.pushed
 /*.html
 /index.css
 /.sass-cache
+/todo-api
