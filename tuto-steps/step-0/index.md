@@ -60,7 +60,7 @@ $ npm install
 $ npm start
 ```
 
-Use `webspicy` in another terminal as you progress in the tutorial steps on this website.
+Use `webspicy` in another terminal as you progress through the tutorial steps on this website.
 
 You are ready to start the tutorial, just run
 
