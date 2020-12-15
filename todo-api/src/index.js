@@ -57,7 +57,12 @@ app.get('/todos', (req, res) => {
 });
 
 app.get('/todos/:id', (req, res) => {
-  res.send(getTodo(req.params.id));
+  const found = getTodo(req.params.id);
+  if (found) {
+    res.send(found);
+  } else {
+    res.sendStatus(404);
+  }
 });
 
 app.post('/todos', (req, res) => {
@@ -67,8 +72,16 @@ app.post('/todos', (req, res) => {
 });
 
 app.delete('/todos/:id', (req, res) => {
-  removeTodo(req.params.id);
-  res.sendStatus(204);
+  const removed = removeTodo(req.params.id);
+  if (typeof removed !== 'undefined') {
+    if (removed.length > 0) {
+      res.sendStatus(204);
+    } else {
+      res.sendStatus(404);
+    }
+  } else {
+    res.sendStatus(500);
+  }
 });
 
 app.listen(port, () => {
