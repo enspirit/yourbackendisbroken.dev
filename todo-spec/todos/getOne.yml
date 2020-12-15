@@ -1,0 +1,44 @@
+---
+name: |-
+  Todos
+
+url: |-
+  /todos/{id}
+
+services:
+- method: |-
+    GET
+
+  description: |-
+    Returns the collection of todos
+
+  input_schema: |-
+    TodoRef
+
+  output_schema: |-
+    TodoFull
+
+  error_schema: |-
+    .
+
+  examples:
+
+    - description: |-
+        when requested
+      params:
+        id: 2
+      expected:
+        content_type: application/json
+        status: 200
+      assert:
+        - "pathFD('', id: 2, description: 'two')"
+
+  counterexamples:
+
+    - description: |-
+        when requested on an unexisting todo
+      params:
+        id: 9999
+      expected:
+        content_type: text/plain
+        status: 404
