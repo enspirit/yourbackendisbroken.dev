@@ -3,7 +3,7 @@ image:
 
 # Workspace startup
 tasks:
-  - init: cd todo-api && npm install
+  - init: cd todo-api && npm install && nginx
     command: npm start
   - openMode: tab-after
     command: clear && gp await-port 3000 && cat .tutorial/banner.txt
