@@ -56,3 +56,34 @@ footer.tutorials-footer {
     border-color: lighten($dark-background, 25%);
   }
 }
+
+summary {
+  font-weight: bold;
+  margin: -.5em -.5em 0;
+  padding: .5em;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+details[open] {
+  background-color: lighten($dark-background, 33%);
+  border-left: 10px solid lighten($dark-background, 25%);
+  padding: 20px 10px;
+  padding-left: 37px;
+  summary {
+    margin-left: -37px;
+  }
+}
+
+details[open] summary {
+  margin-bottom: .5em;
+}
+
+details {
+  padding: 20px;
+  border-bottom: 1px solid lighten($dark-background, 25%);
+  &:first-of-type {
+    border-top: 1px solid lighten($dark-background, 25%);
+  }
+}
