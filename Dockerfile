@@ -1,18 +1,15 @@
-FROM ruby:2.7 AS html
+FROM q8s.quadrabee.com/enspirit/startback-web-2.7:0.7 as builder
 
 WORKDIR /app
 COPY . /app
-RUN make clean html
+USER root
 
-FROM node:latest AS css
-
+COPY Gemfile /app/Gemfile
+RUN bundle install
 RUN npm install -g sass
 
-WORKDIR /app
-COPY . /app
-RUN make clean css
+RUN make clean html css
 
 FROM nginx:alpine
 
-COPY --from=html /app/*.html /app/scripts/ /usr/share/nginx/html/
-COPY --from=css /app/*.css /usr/share/nginx/html/
+COPY --from=builder /app/*.css /app/*.html /app/scripts/ /usr/share/nginx/html/

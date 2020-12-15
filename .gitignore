@@ -6,4 +6,6 @@ Dockerfile.pushed
 /index.css
 /.sass-cache
 /todo-api
-/tuto-steps/**/*.html
+/pages/tuto-steps/**/*.html
+.DS_Store
+Gemfile.lock

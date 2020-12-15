@@ -2,30 +2,33 @@
 
 DOCKER_REGISTRY := $(or ${DOCKER_REGISTRY},${DOCKER_REGISTRY},docker.io)
 
-index.html: pages/* pages/partials/* pages/layouts/*
-	bin/i pages/index.html > index.html
+pages/tuto-steps/%.html: pages/tuto-steps/%.md
+	bundle exec ruby bin/m $< > $@
 
-get-our-help.html: pages/* pages/partials/* pages/layouts/*
-	bin/i pages/get-our-help.html > get-our-help.html
+index.html: pages/index.html
+	bundle exec ruby bin/i pages/index.html > index.html
 
-tutorial.html: pages/* pages/partials/* pages/layouts/*
-	bin/i pages/tutorial.html > tutorial.html
+get-our-help.html: pages/get-our-help.html
+	bundle exec ruby bin/i pages/get-our-help.html > get-our-help.html
 
-tutorial-step-0.html: pages/* pages/partials/* pages/layouts/* pages/tutorial/*
-	bin/i pages/tutorial/step-0.html > tutorial-step-0.html
+tutorial.html: pages/tutorial.html
+	bundle exec ruby bin/i pages/tutorial.html > tutorial.html
 
-tutorial-step-1.html: pages/* pages/partials/* pages/layouts/* pages/tutorial/*
-	bin/i pages/tutorial/step-1.html > tutorial-step-1.html
+extra-goodies.html: pages/extra-goodies.html
+	bundle exec ruby bin/i pages/extra-goodies.html > extra-goodies.html
 
-extra-goodies.html: pages/* pages/partials/* pages/layouts/*
-	bin/i pages/extra-goodies.html > extra-goodies.html
+why.html: pages/why.html
+	bundle exec ruby bin/i pages/why.html > why.html
 
-why.html: pages/* pages/partials/* pages/layouts/*
-	bin/i pages/why.html > why.html
+tutorial-step-0.html: pages/tutorial/step-0.html pages/tuto-steps/step-0/index.html
+	bundle exec ruby bin/i pages/tutorial/step-0.html > tutorial-step-0.html
+
+tutorial-step-1.html: pages/tutorial/step-1.html pages/tuto-steps/step-1/index.html
+	bundle exec ruby bin/i pages/tutorial/step-1.html > tutorial-step-1.html
 
 html: index.html get-our-help.html tutorial.html extra-goodies.html why.html tutorial-step-0.html tutorial-step-1.html
 
-index.css: style/* style/shared/* style/pages/*
+index.css: $(shell find style -type f | grep -v ".DS_Store")
 	sass style/index.scss > index.css
 
 css: index.css
@@ -36,15 +39,15 @@ clean:
 	rm -rf *.css *.html
 	rm -rf Dockerfile.log Dockerfile.built
 
-Dockerfile.built: Dockerfile pages/* pages/partials/* pages/layouts/* style/* style/pages/* style/shared/* scripts/*
-	docker build -t enspirit/yourbackendisbroken .  | tee Dockerfile.log
+Dockerfile.built: Dockerfile $(shell find pages -type f | grep -v ".DS_Store")
+	docker build -t enspirit/yourbackendisbroken:website .  | tee Dockerfile.log
 	touch Dockerfile.built
 
 image: Dockerfile.built
 
 Dockerfile.pushed: Dockerfile.built
-	docker tag enspirit/yourbackendisbroken $(DOCKER_REGISTRY)/enspirit/yourbackendisbroken
-	docker push $(DOCKER_REGISTRY)/enspirit/yourbackendisbroken
+	docker tag enspirit/yourbackendisbroken:website $(DOCKER_REGISTRY)/enspirit/yourbackendisbroken:website
+	docker push $(DOCKER_REGISTRY)/enspirit/yourbackendisbroken:website
 	touch Dockerfile.pushed
 
 push-image: Dockerfile.pushed
@@ -56,10 +59,7 @@ dev:
 	docker run -v $$PWD:/usr/share/nginx/html/ -p 8080:80 nginx
 
 hack-image:
-	docker build -t enspirit/yourbackendisbroken-hack --file Dockerfile.hack .
+	docker build -t enspirit/yourbackendisbroken:website-hack --file Dockerfile.hack .
 
 hack: hack-image
-	docker run -it -v $$PWD:/app enspirit/yourbackendisbroken-hack bash
-
-tuto-steps/%.html: tuto-steps/%.md
-	bin/m $< > $@
+	docker run -it -v $$PWD:/app enspirit/yourbackendisbroken:website-hack bash
