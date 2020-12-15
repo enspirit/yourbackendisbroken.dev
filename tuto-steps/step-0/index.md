@@ -57,4 +57,4 @@ npm install
 npm serve
 ```
 
-Use webspicy in another terminal, as you progress in the tutorial steps on this website.
+Use webspicy in another terminal as you progress through the tutorial steps on this website.
