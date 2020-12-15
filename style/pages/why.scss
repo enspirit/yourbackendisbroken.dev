@@ -16,16 +16,6 @@ body.why {
       margin: 1em 0;
       > li {
         margin: 0.6em;
-        a {
-          font-family: $text-font;
-          color: $main-color;
-          text-decoration: underline;
-        }
-        code {
-          font-family: $code-font;
-          font-size: 0.85em;
-          color: $bg-to;
-        }
       }
     }
   }

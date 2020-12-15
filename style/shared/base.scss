@@ -74,6 +74,7 @@ footer {
   font-size: 1.4em;
   > a,
   > a:visited {
+    font-family: $heading-font;
     padding: 10px 0px;
     margin: 0 10px;
     color: $main-color;
@@ -95,9 +96,15 @@ a,
 a:visited {
   display: inline-block;
   text-decoration: none;
-  font-family: 'Quando', serif;
   letter-spacing: -1px;
   color: $main-color;
+  font-family: $text-font;
+}
+
+code {
+  font-family: $code-font;
+  font-size: 0.85em;
+  color: $bg-to;
 }
 
 .btn {
