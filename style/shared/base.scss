@@ -7,16 +7,17 @@
 html,
 body {
   font-size: 18px;
-  font-family: $text-font, serif;
+  font-family: $text-font;
   color: $text-color;
   margin: 0;
   padding: 0;
+  padding-top: 40px;
 }
 
 h1,
 h2,
 h3 {
-  font-family: $heading-font, serif;
+  font-family: $heading-font;
   padding: 10px 0;
   margin: 1em 0;
   code {
@@ -25,12 +26,10 @@ h3 {
 }
 h1 {
   font-size: 2.5em;
-  font-weight: bold;
   margin-top: 0;
 }
 h2 {
   font-size: 1.6em;
-  font-weight: bold;
 }
 h3 {
   font-size: 1.4em;
@@ -69,22 +68,22 @@ footer {
   top: 0;
   right: 0;
   left: 0;
-  padding: 20px 20px;
+  padding: 0px 20px;
   text-align: center;
-  background-color: $dark-background;
+  background-color: $darker-background;
   color: white;
   border-bottom-left-radius: 10px;
   font-size: 1.4em;
   z-index: 10; // above pre code blocks
   > a,
   > a:visited {
-    font-family: $heading-font;
-    padding: 10px 0px;
+    font-family: $text-font;
+    padding: 20px 0px;
     margin: 0 10px;
     color: white;
   }
   > a:hover {
-    color: $main-color-darken;
+    color: $main-color;
     cursor: pointer;
   }
 }
@@ -92,7 +91,7 @@ footer {
 @mixin active-nav {
   border-bottom: 4px solid $main-color;
   &:hover {
-    border-bottom-color: $main-color-darken;
+    border-bottom-color: $main-color;
   }
 }
 
