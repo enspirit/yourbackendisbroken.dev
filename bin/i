@@ -13,6 +13,7 @@ end
 page_html = WLang::Html.render(page.read, partials)
 rendered  = WLang::Html.render(html.read, {
   yield: page_html,
-  body_class: page.basename.rm_ext.to_s
+  body_class: page.basename.rm_ext.to_s,
+  prefix_css: page.relative_to(pages).to_s.gsub(%r{[^/]},"").gsub(%r{[/]}, "../")
 })
 puts rendered
