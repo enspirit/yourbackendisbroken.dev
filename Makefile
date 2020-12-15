@@ -3,41 +3,41 @@
 pages/tuto-steps/%.html: pages/tuto-steps/%.md
 	bundle exec ruby bin/m $< > $@
 
-index.html: pages/index.html
-	bundle exec ruby bin/i pages/index.html > index.html
+site/index.html: pages/index.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
+	bundle exec ruby bin/i pages/index.html > site/index.html
 
-get-our-help.html: pages/get-our-help.html
-	bundle exec ruby bin/i pages/get-our-help.html > get-our-help.html
+site/get-our-help.html: pages/get-our-help.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
+	bundle exec ruby bin/i pages/get-our-help.html > site/get-our-help.html
 
-tutorial.html: pages/tutorial.html
-	bundle exec ruby bin/i pages/tutorial.html > tutorial.html
+site/tutorial.html: pages/tutorial.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
+	bundle exec ruby bin/i pages/tutorial.html > site/tutorial.html
 
-extra-goodies.html: pages/extra-goodies.html
-	bundle exec ruby bin/i pages/extra-goodies.html > extra-goodies.html
+site/extra-goodies.html: pages/extra-goodies.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
+	bundle exec ruby bin/i pages/extra-goodies.html > site/extra-goodies.html
 
-why.html: pages/why.html
-	bundle exec ruby bin/i pages/why.html > why.html
+site/why.html: pages/why.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
+	bundle exec ruby bin/i pages/why.html > site/why.html
 
-tutorial-step-0.html: pages/tutorial/step-0.html pages/tuto-steps/step-0/index.html
-	bundle exec ruby bin/i pages/tutorial/step-0.html > tutorial-step-0.html
+site/tutorial/step-0.html: pages/tutorial/step-0.html pages/tuto-steps/step-0/index.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
+	bundle exec ruby bin/i pages/tutorial/step-0.html > site/tutorial/step-0.html
 
-tutorial-step-1.html: pages/tutorial/step-1.html pages/tuto-steps/step-1/index.html
-	bundle exec ruby bin/i pages/tutorial/step-1.html > tutorial-step-1.html
+site/tutorial-step-1.html: pages/tutorial/step-1.html pages/tuto-steps/step-1/index.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
+	bundle exec ruby bin/i pages/tutorial/step-1.html > site/tutorial/step-1.html
 
-html: index.html get-our-help.html tutorial.html extra-goodies.html why.html tutorial-step-0.html tutorial-step-1.html
+html: site/index.html site/get-our-help.html site/tutorial.html site/extra-goodies.html site/why.html site/tutorial/step-0.html site/tutorial/step-1.html
 
 index.css: $(shell find style -type f | grep -v ".DS_Store")
-	sass style/index.scss > index.css
+	sass style/index.scss > site/index.css
 
-css: index.css
+css: site/index.css
 
-all: html css
+site: html css
 
 clean:
-	rm -rf *.css *.html
-	rm -rf Dockerfile.log Dockerfile.built
+	rm -rf *.css *.html site/*
+	rm -rf Dockerfile.log Dockerfile.built Dockerfile.pushed
 
-Dockerfile.built: Dockerfile $(shell find pages -type f | grep -v ".DS_Store")
+Dockerfile.built: Dockerfile
 	docker build -t enspirit/yourbackendisbroken:website .  | tee Dockerfile.log
 	touch Dockerfile.built
 

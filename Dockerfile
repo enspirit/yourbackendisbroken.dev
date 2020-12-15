@@ -12,4 +12,4 @@ RUN make clean html css
 
 FROM nginx:alpine
 
-COPY --from=builder /app/*.css /app/*.html /app/scripts/ /usr/share/nginx/html/
+COPY --from=builder /app/site/*.css /app/site/*.html /app/scripts/ /usr/share/nginx/html/

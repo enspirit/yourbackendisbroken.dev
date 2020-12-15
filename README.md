@@ -6,7 +6,7 @@ The website is simply a .css and .html generator from partials.
 
 ```
 make hack
-watch make all
+watch make site
 ```
 
 ### Get the website running on your machine

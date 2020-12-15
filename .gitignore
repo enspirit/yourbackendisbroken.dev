@@ -9,3 +9,4 @@ Dockerfile.pushed
 /pages/tuto-steps/**/*.html
 .DS_Store
 Gemfile.lock
+/site/*
