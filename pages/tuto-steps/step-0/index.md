@@ -24,7 +24,7 @@ We provide a [Docker](https://docker.io/) image that automatically clones our gi
 ```
 $ mkdir yourbackendisbroken
 $ cd yourbackendisbroken
-$ docker run -it --pull-always \
+$ docker run -it \
   -p 3000:3000 \
   -p 8080:80 \
   -v $PWD:/ybib \
