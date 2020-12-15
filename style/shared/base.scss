@@ -1,3 +1,8 @@
+:root {
+  background-color: $dark-background;
+  color: $text-color;
+}
+
 html,
 body {
   font-size: 18px;
@@ -12,16 +17,17 @@ h2,
 h3 {
   font-family: $heading-font, serif;
   padding: 10px 0;
+  margin: 1em 0;
 }
 h1 {
   font-size: 2.5em;
   font-weight: bold;
+  margin-top: 0;
 }
 h2 {
   font-size: 1.6em;
   line-height: 1.25;
   font-weight: bold;
-  margin-bottom: 1em;
 }
 h3 {
   font-size: 1.4em;
@@ -59,9 +65,10 @@ footer {
   position: fixed;
   top: 0;
   right: 0;
+  left: 0;
   padding: 20px 20px;
-  text-align: right;
-  background-color: white;
+  text-align: center;
+  background-color: $dark-background;
   color: $main-color;
   border-bottom-left-radius: 10px;
   font-size: 1.4em;
@@ -72,20 +79,25 @@ footer {
     color: $main-color;
   }
   > a:hover {
-    color: darken($main-color, 25%);
+    color: $main-color-darken;
     cursor: pointer;
   }
 }
 
 @mixin active-nav {
   border-bottom: 2px solid $main-color;
+  &:hover {
+    border-bottom-color: $main-color-darken;
+  }
 }
 
-a {
+a,
+a:visited {
   display: inline-block;
   text-decoration: none;
   font-family: 'Quando', serif;
   letter-spacing: -1px;
+  color: $main-color;
 }
 
 .btn {

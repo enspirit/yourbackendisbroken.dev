@@ -8,19 +8,49 @@
   &-nav {
     grid-area: tutorial-nav;
     text-align: left;
+    position: fixed;
     a,
     a:visited {
-      color: grey;
+      color: $main-color;
     }
 
     a:hover {
-      color: #7B0861;
+      color: $main-color-darken;
     }
   }
   &-main {
     grid-area: tutorial-main;
+    text-align: left;
   }
   &-footer {
     grid-area: tutorial-footer;
+  }
+}
+
+.step-1 {
+  nav > a.tutorial {
+    @include active-nav;
+  }
+}
+
+pre code {
+  background-color: whitesmoke;
+  color: $dark-background;
+  width: 90%;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+footer.tutorials-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30;
+  .next {
+    margin-left: auto;
+  }
+  .btn {
+    border-color: lighten($dark-background, 25%);
   }
 }

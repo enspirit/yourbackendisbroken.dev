@@ -1,13 +1,57 @@
 >{nav}
-<section class="tutorials">
+<section class="tutorials step-1">
   <aside class="tutorials-nav">
     >{nav-tutorial}
   </aside>
   <main class="tutorials-main">
-    ici le contenu du step
+    <h1>Webspicy Tutorial - Step 0</h1>
+    <p>Welcome to this tutorial on black-box API testing with <code>webspicy</code>!</p>
+    <p>There are three main ways to run the tutorial: gitpod, docker, or cloning our repository. Whatever your choice,
+      you must end up with a shell where the following commands work:</p>
+    <pre><code>curl http://127.0.0.1/api/version
+webspicy --help
+webspicy http://127.0.0.1/api/version
+</code></pre>
+    <h2>Use gitpod</h2>
+    <p>We provide a <a href="https://www.gitpod.io/" target="_blank" onclick="event.stopPropagation();">Gitpod</a>
+      development environment that runs inside your browser. You don't have to install anything, just click the link
+      below:</p>
+    <p><a href="https://www.gitpod.io/..." target="_blank" onclick="event.stopPropagation();">Run webspicy tutorial on
+        Gitpod</a></p>
+    <p>The tutorial instructions are fully integrated in the gitpod experience, you can close this website and focus on
+      what's happening there.</p>
+    <h2>Use our docker image</h2>
+    <p>We provide a <a href="https://docker.io/" target="_blank" onclick="event.stopPropagation();">Docker</a> image
+      that automatically clones our github repository on your computer and give you a shell to execute
+      <code>webspicy</code> commands on an existing (broken) backend written in node.js.</p>
+    <pre><code>mkdir yourbackendisbroken
+cd yourbackendisbroken
+docker -v $PWD:/yourbackendisbroken run yourbackendisbroken/tutorial
+</code></pre>
+    <p>Keep a browser open with this website, and the docker shell next to it. Move from step to step as your progress.
+    </p>
+    <h2>Clone the github repository</h2>
+    <p>The third alternative is to clone the tutorial repository on github. It requires a bit more work, but is probably
+      closer to what you would need to test your own backend on a developer machine.</p>
+    <p>First clone the repository from github, then install nodejs (for the backend example) and ruby (for
+      <code>webspicy</code> itself):</p>
+    <pre><code>git clone https://github.com/enspirit/yourbackendisbroken.dev
+cd yourbackendisbroken.dev
+apt-get install nodejs ruby
+</code></pre>
+    <p>Install the webspicy ruby gem:</p>
+    <pre><code>gem install webspicy
+webspicy --help
+</code></pre>
+    <p>Start the todo API in one terminal to keep an eye on the logs. You will need to restart it if you change the
+      source code:</p>
+    <pre><code>cd todo-api
+npm install
+npm serve
+</code></pre>
+    <p>Use webspicy in another terminal, as you progress in the tutorial steps on this website.</p>
   </main>
   <footer class="tutorials-footer">
-    <a class="btn prev" href="#">previous</a>
-    <a class="btn next" href="#">next</a>
+    <a class="btn next" href="tutorial-step-2.html">next</a>
   </footer>
 </section>
