@@ -41,6 +41,9 @@ clean:
 	rm -rf *.css *.html site/* pages/tuto-steps/**/*.html
 	rm -rf Dockerfile.log Dockerfile.built Dockerfile.pushed
 
+check:
+	grep --color -Rn href pages  | grep -v page_prefix | grep -v http | grep -v mailto | grep -v 'href="#' | grep -v 'href="step' | grep href
+
 Dockerfile.built: Dockerfile Makefile $(shell find pages style -type f | grep -v ".DS_Store")
 	docker build -t enspirit/yourbackendisbroken:website .  | tee Dockerfile.log
 	touch Dockerfile.built

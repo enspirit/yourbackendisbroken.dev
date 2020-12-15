@@ -10,10 +10,13 @@ partials = pages.glob("**/*.html").each_with_object({}) do |pf,h|
   h[pf.relative_to(pages).rm_ext.to_s] = pf.read
 end
 
-page_html = WLang::Html.render(page.read, partials)
+page_prefix = page.relative_to(pages).to_s.gsub(%r{[^/]},"").gsub(%r{[/]}, "../")
+page_html = WLang::Html.render(page.read, partials.merge({
+  page_prefix: page_prefix
+}))
 rendered  = WLang::Html.render(html.read, {
   yield: page_html,
   body_class: page.basename.rm_ext.to_s,
-  prefix_css: page.relative_to(pages).to_s.gsub(%r{[^/]},"").gsub(%r{[/]}, "../")
+  page_prefix: page_prefix
 })
 puts rendered
