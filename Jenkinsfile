@@ -39,7 +39,7 @@ pipeline {
       steps {
         container('builder') {
           script {
-            docker.withRegistry('https://docker.io', 'dockerhub-credentials') {
+            docker.withRegistry('', 'dockerhub-credentials') {
               sh 'make push-image'
             }
           }
