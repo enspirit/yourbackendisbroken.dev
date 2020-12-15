@@ -10,3 +10,5 @@ Dockerfile.pushed
 .DS_Store
 Gemfile.lock
 /site/*
+Dockerfile.hack.log
+Dockerfile.hack.built

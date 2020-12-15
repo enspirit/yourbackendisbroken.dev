@@ -1,0 +1,13 @@
+{
+  "options": {
+    "html": false,
+    "xhtmlOut": false,
+    "breaks": false,
+    "langPrefix": "language-",
+    "linkify": false,
+    "typographer": false,
+    "quotes": "“”‘’"
+  },
+  "plugins": [
+  ]
+}

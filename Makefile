@@ -1,7 +1,7 @@
 -include .env
 
 pages/tuto-steps/%.html: pages/tuto-steps/%.md
-	bundle exec ruby bin/m $< > $@
+	markdown-it-cli $< > $@
 
 site/index.html: pages/index.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
 	bundle exec ruby bin/i pages/index.html > site/index.html
@@ -38,7 +38,7 @@ site: site/tutorial html css
 all: site
 
 clean:
-	rm -rf *.css *.html site/*
+	rm -rf *.css *.html site/* pages/tuto-steps/**/*.html
 	rm -rf Dockerfile.log Dockerfile.built Dockerfile.pushed
 
 Dockerfile.built: Dockerfile Makefile $(shell find pages style -type f | grep -v ".DS_Store")
@@ -59,8 +59,9 @@ run: image
 dev:
 	docker run -v $$PWD/site:/usr/share/nginx/html/ -p 8080:80 nginx
 
-hack-image:
-	docker build -t enspirit/yourbackendisbroken:website-hack --file Dockerfile.hack .
+Dockerfile.hack.built: Dockerfile.hack Makefile
+	docker build -t enspirit/yourbackendisbroken:website-hack --file Dockerfile.hack .  | tee Dockerfile.hack.log
+	touch Dockerfile.hack.built
 
-hack: hack-image
+hack: Dockerfile.hack.built
 	docker run -it -v $$PWD:/app enspirit/yourbackendisbroken:website-hack bash

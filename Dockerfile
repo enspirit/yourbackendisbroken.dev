@@ -5,7 +5,7 @@ USER root
 
 COPY Gemfile /app/Gemfile
 RUN bundle install
-RUN npm install -g sass
+RUN npm install -g sass markdown-it-cli
 
 COPY . /app
 RUN make clean html css
