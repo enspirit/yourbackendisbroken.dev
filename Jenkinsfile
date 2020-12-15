@@ -2,35 +2,59 @@ pipeline {
 
   agent any
 
+  triggers {
+    issueCommentTrigger('.*build this please.*')
+  }
+
   environment {
-    DOCKER_REGISTRY = 'q8s.quadrabee.com'
+    SLACK_CHANNEL = '#opensource-cicd'
+    DOCKER_REGISTRY = 'docker.io'
   }
 
   stages {
 
-    stage ('Building Docker Image') {
+    stage ('Start') {
+      steps {
+        cancelPreviousBuilds()
+        sendNotifications('STARTED', SLACK_CHANNEL)
+      }
+    }
+
+    stage ('Building Docker Images') {
       steps {
         container('builder') {
-          sh 'make image'
+          script {
+            sh 'make image'
+          }
         }
       }
     }
 
-    stage ('Pushing Docker Image') {
+    stage ('Pushing Docker Images') {
       when {
         anyOf {
+          branch 'nodejs-tuto'
           branch 'master'
         }
       }
       steps {
         container('builder') {
           script {
-            docker.withRegistry('https://q8s.quadrabee.com', 'q8s-deploy-enspirit-be') {
+            docker.withRegistry('https://docker.io', 'dockerhub-credentials') {
               sh 'make push-image'
             }
           }
         }
       }
+    }
+  }
+
+  post {
+    success {
+      sendNotifications('SUCCESS', SLACK_CHANNEL)
+    }
+    failure {
+      sendNotifications('FAILED', SLACK_CHANNEL)
     }
   }
 }
