@@ -61,3 +61,9 @@ $ npm start
 ```
 
 Use `webspicy` in another terminal as you progress in the tutorial steps on this website.
+
+You are ready to start the tutorial, just run
+
+```
+bin/start
+```
