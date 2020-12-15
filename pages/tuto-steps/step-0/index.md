@@ -26,7 +26,7 @@ mkdir yourbackendisbroken
 cd yourbackendisbroken
 docker run -it \
   -p 3000:3000 \
-  -p 8080:80 \
+  -p 8080:8080 \
   -v $PWD:/ybib \
   enspirit/yourbackendisbroken
 ```
