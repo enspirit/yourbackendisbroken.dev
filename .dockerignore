@@ -3,3 +3,4 @@ Dockerfile.built
 .env
 Jenkinsfile
 /pages/tuto-steps/**/*.html
+Gemfile.lock
