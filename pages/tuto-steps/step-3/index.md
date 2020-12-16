@@ -2,7 +2,7 @@
 
 Please make sure your are on step 3 in your terminal by typing:
 
-```
+```bash
 bin/step 3
 ```
 
@@ -32,7 +32,7 @@ counterexamples:
 
 And let's run webspicy:
 
-```
+```bash
 webspicy --debug todo-spec/todos/getOne.yml
 ```
 

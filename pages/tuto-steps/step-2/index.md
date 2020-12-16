@@ -2,7 +2,7 @@
 
 Please make sure your are on step 2 in your terminal by typing:
 
-```
+```bash
 bin/step 2
 ```
 
@@ -15,7 +15,7 @@ We start by creating a yaml file describing the specification of the endpoint. (
 
 Let's run webspicy:
 
-```
+```bash
 webspicy --debug todo-spec/todos/getAll.yml
 ```
 
@@ -38,18 +38,16 @@ output_schema: |-
 2. To ensure we receive 6 Todo items, assert some properties onto the output as shown below:
 
 ```yaml
-...
 expected:
   content_type: application/json
   status: 200
 assert:
   - size(6)
-...
 ```
 
 Let's run webspicy again:
 
-```
+```bash
 webspicy --debug todo-spec/todos/getAll.yml
 ```
 

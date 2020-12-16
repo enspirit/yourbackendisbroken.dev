@@ -2,7 +2,7 @@
 
 Please make sure your are on step 1 in your terminal by typing:
 
-```
+```bash
 bin/step 1
 ```
 
@@ -12,21 +12,21 @@ In this first step, we will show you that `webspicy` is a simple HTTP client, a 
 
 If you completed step 0, you should be able to reach our API example with curl:
 
-```
+```bash
 curl http://127.0.0.1:3000/version
 ```
 
-```
+```stdout
 {"name":"TODOS API","version":"0.0.1"}
 ```
 
 Let's now do the same using webspicy:
 
-```
+```bash
 webspicy http://127.0.0.1:3000/version
 ```
 
-```
+```stdout
 GET http://127.0.0.1:3000/version it returns a 200
   meets its specification
 
@@ -45,7 +45,7 @@ whether a web service meets a *specification*. Here it used
 a default specification, that you can see with the `--debug`
 flag:
 
-```
+```bash
 webspicy --debug http://127.0.0.1:3000/version
 ```
 
