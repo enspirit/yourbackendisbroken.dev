@@ -3,11 +3,14 @@
     "html": false,
     "xhtmlOut": false,
     "breaks": false,
-    "langPrefix": "language-",
     "linkify": false,
     "typographer": false,
     "quotes": "“”‘’"
   },
-  "plugins": [
-  ]
+  "plugins": [{
+    "name": "markdown-it-highlightjs",
+    "options": {
+      "auto": false
+    }
+  }]
 }
