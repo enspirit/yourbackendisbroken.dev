@@ -13,6 +13,8 @@ app.get('/ping', (req, res) => {
   res.send('pong');
 });
 
+console.log(process.env);
+
 const io = require("socket.io")(http, {
   cors: {
     origin: "https://yourbackendisbroken.dev",

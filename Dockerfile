@@ -1,11 +1,3 @@
-FROM alpine as ttyecho
-
-RUN apk add gcc libc-dev
-
-# ttyecho
-COPY .tutorial/ttyecho.c /tmp
-RUN gcc -o /usr/bin/ttyecho /tmp/ttyecho.c
-
 FROM enspirit/webspicy
 
 ##
@@ -14,9 +6,10 @@ ARG YBIB_BRANCH
 ENV YBIB_BRANCH=${YBIB_BRANCH}
 ENV YBIB_REPO=${YBIB_REPO}
 ENV DOCKER_ENV=1
+ENV YBIB_TMUX_SESS=YBIBTMUX
 
 ##
-RUN apk add --no-cache bash git curl supervisor netcat-openbsd nodejs nodejs-npm
+RUN apk add --no-cache bash tmux git curl supervisor netcat-openbsd nodejs nodejs-npm
 
 # disable warnings in ruby
 ENV RUBYOPT="-W0"
@@ -30,13 +23,11 @@ ENV PATH="$PATH:/opt/node_deps/node_modules/.bin"
 
 WORKDIR /ybib
 
-# ttyecho
-COPY --from=ttyecho /usr/bin/ttyecho /usr/bin
-
 # Supervisord, entrypoint, scripts, ...
 RUN mkdir -p /run/nginx/ /usr/share/nginx/html
 COPY .tutorial/supervisord.conf /etc/
 COPY .tutorial/curlrc $HOME/.curlrc
+COPY .tutorial/tmux.conf $HOME/.tmux.conf
 COPY .tutorial/entrypoint.sh .tutorial/start-api.sh /
 
 # Tutorial api & webpages

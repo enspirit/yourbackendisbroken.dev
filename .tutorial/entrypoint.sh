@@ -16,6 +16,4 @@ fi
 supervisord
 clear
 
-./bin/start
-
-bash
+tmux new -s $YBIB_TMUX_SESS "./bin/start && bash"

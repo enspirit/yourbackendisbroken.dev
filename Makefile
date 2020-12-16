@@ -18,5 +18,14 @@ start: image
 		--user ${UID}:${GID} \
 		enspirit/yourbackendisbroken
 
+tuto: image
+	mkdir -p /tmp/tuto
+	docker run -it \
+		-p 3000:3000 \
+		-p 8080:8080 \
+		-v /tmp/tuto:/ybib \
+		--user ${UID}:${GID} \
+		enspirit/yourbackendisbroken
+
 push-image: image
 	docker push enspirit/yourbackendisbroken
