@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+const figlet = require('figlet');
+const banner = (process.argv[2] || '').toUpperCase();
+
+figlet.text(banner, {
+  font: 'ANSI Shadow',
+  horizontalLayout: 'default',
+  verticalLayout: 'default',
+  width: 80,
+  whitespaceBreak: true
+}, (err, data) => {
+  if (err) {
+      console.log(`${banner}\n\n`);
+      return;
+  }
+  console.log(data);
+});

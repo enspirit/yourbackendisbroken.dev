@@ -14,9 +14,9 @@ RUN apk add --no-cache bash tmux git curl supervisor netcat-openbsd nodejs nodej
 # disable warnings in ruby
 ENV RUBYOPT="-W0"
 
-# Install todos-api's
+# Install tutorial (& todos-api's)
 WORKDIR /opt/node_deps/
-COPY todo-api/package.json ./
+COPY .tutorial/package.json ./
 RUN npm install
 ENV NODE_PATH="/opt/node_deps/node_modules/"
 ENV PATH="$PATH:/opt/node_deps/node_modules/.bin"
