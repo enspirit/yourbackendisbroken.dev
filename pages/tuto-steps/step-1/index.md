@@ -23,7 +23,7 @@ curl http://127.0.0.1:3000/version
 Let's now do the same using webspicy:
 
 ```
-webspicy --debug http://127.0.0.1:3000/version
+webspicy http://127.0.0.1:3000/version
 ```
 
 ```
