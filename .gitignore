@@ -9,3 +9,8 @@ package-lock.json
 Dockerfile.log
 Dockerfile.built
 Dockerfile.pushed
+Dockerfile.hack.built
+Dockerfile.hack.log
+Gemfile.lock
+site/
+pages/tuto-steps/**/*.html
