@@ -1,6 +1,6 @@
 # Step 3 - It ensures robustness too
 
-Please make sure your are on step 1 in your terminal by typing:
+Please make sure your are on step 3 in your terminal by typing:
 
 ```
 bin/step 3
