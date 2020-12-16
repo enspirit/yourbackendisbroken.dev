@@ -2,6 +2,16 @@ body.extra-goodies {
   nav > a.extra-goodies {
     @include active-nav;
   }
+  &::before {
+    content: "";
+    width: 500px;
+    height: 500px;
+    mask: url(../../assets/circle.svg) no-repeat center;
+    -webkit-mask: url(../../assets/circle.svg) no-repeat center;
+    position: absolute;
+    z-index: -1;
+    background-color: linear-gradient(0deg, rgba(126,63,151,1) 0%, rgba(77,84,255,1) 100%);
+  }
 
   section {
     padding: 100px 20px;

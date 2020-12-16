@@ -4,12 +4,70 @@ body.index {
     font-weight: normal;
     color: $grey-heading;
   }
+
+  h1 {
+    font-size: 50pt;
+    margin-bottom: 32pt;
+  }
+
+  header {
+    width: 40%;
+    margin-left: 25%;
+    padding: 0px;
+    padding-top: 140px;
+    text-align: left;
+
+    p {
+      line-height: 28pt;
+    }
+  }
+
+  section {
+    padding: 80px;
+
+    span {
+      font-weight: bold;
+      color: $bold-color;
+    }
+  }
 }
 body.index {
   nav > a.index {
     @include active-nav;
   }
-  footer {
-    padding-bottom: 340px;
+
+  &::before {
+    content: "";
+    width: 800px;
+    height: 800px;
+    mask: url(../../assets/circle.svg) no-repeat center;
+    -webkit-mask: url(../../assets/circle.svg) no-repeat center;
+    position: absolute;
+    right: 0;
+    top:0;
+    z-index: -1;
+    background: linear-gradient(45deg, #7e3f97 35%, #4d54ff 70%);
   }
+
+  .twitter {
+    display: flex;
+    margin: 27px auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    width: fit-content;
+    padding: 10px 150px;
+    a, a:visited {
+      background-color: initial;
+      color: white;
+      padding: 10px;
+    }
+    .logo {
+      margin: auto 0px;
+      svg {
+        width: 30px;
+        fill: white;
+      }
+    }
+  }
+
 }

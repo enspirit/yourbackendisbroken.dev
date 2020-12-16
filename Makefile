@@ -34,7 +34,13 @@ site/index.css: $(shell find style -type f | grep -v ".DS_Store")
 
 css: site/index.css
 
-site: site/tutorial html css
+site/assets:
+	mkdir -p site/assets
+	cat assets/circle.svg > site/assets/circle.svg
+
+assets: site/assets
+
+site: site/tutorial html css assets
 all: site
 
 clean:

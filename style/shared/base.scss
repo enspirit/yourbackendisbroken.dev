@@ -41,9 +41,10 @@ h3 {
 details,
 p,
 li,
-input {
+input,
+a {
   font-family: $text-font;
-  font-size: 1.25em;
+  font-size: 16pt;
 }
 
 p,
@@ -61,7 +62,6 @@ footer {
   padding-bottom: 30px;
 
   .terms-privacy {
-    font-size: 10px;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -70,6 +70,7 @@ footer {
       letter-spacing: initial;
     }
     p {
+      font-size: 14pt;
       padding: 0px 15px;
     }
     p + p {
