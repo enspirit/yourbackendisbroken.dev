@@ -36,13 +36,27 @@
     text-align: left;
     margin-bottom: 100px;
     h2 {
-      margin-top: 3em;
+      margin-top: 2em;
       &:first-of-type {
         margin-top: 1em;
       }
     }
+    p, li {
+      line-height: 1.4;
+    }
     p {
       margin: 15px 0;
+    }
+    em {
+      padding: 2px;
+      border-bottom: 1px solid $main-color;
+    }
+    ul, ol {
+      list-style: disc;
+      padding-left: 40px;
+      li > p {
+        margin: 0;
+      }
     }
   }
   &-footer {
