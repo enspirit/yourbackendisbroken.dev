@@ -1,4 +1,4 @@
-# Webspicy Tutorial - Step 2
+# Step 2 - It's a test framework, so it asserts!
 
 In this second step we are going to test a simple `GET` endpoint.
 Our API is currently serving a list of Todo items on `/todos`.

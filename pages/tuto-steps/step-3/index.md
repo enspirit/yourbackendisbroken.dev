@@ -1,4 +1,4 @@
-# Webspicy Tutorial - Step 3
+# Step 3 - It ensures robustness too
 
 In `todo-spec/todos/getOne.yml` we can find the specification of the `GET /todos/:id` endpoint.
 

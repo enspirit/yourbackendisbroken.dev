@@ -1,4 +1,4 @@
-# Webspicy Tutorial - Step 1
+# Step 1 - Webspicy is a bit like `curl`
 
 In this first step, we will show you that `webspicy` is a simple HTTP client, a bit like `curl`. The difference is that it allows making *assertions* about the content received from an API.
 

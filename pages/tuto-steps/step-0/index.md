@@ -1,4 +1,4 @@
-# Webspicy Tutorial - Step 0
+# Step 0 - Choose a tutorial setup
 
 Welcome to this tutorial on black-box API testing with `webspicy`!
 
