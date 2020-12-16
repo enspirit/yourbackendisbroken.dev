@@ -1,6 +1,58 @@
 require 'path'
 require 'wlang'
 
+require 'wlang'
+require 'wlang/dummy'
+
+class Ybib < WLang::Dialect
+
+  module Helpers
+
+    def to_html(val)
+      val = val.to_html if val.respond_to?(:to_html)
+      val = to_html(val.call) if val.is_a?(Proc)
+      val.to_s
+    end
+    private :to_html
+
+    def escape_html(val)
+      Temple::Utils.escape_html(val).gsub(/\//, '&#47;')
+    end
+    private :escape_html
+
+  end
+  include Helpers
+
+  module HighOrderFunctions
+
+    def plus(buf, fn)
+      val = evaluate(fn)
+      val = to_html(val) unless val.is_a?(WLang::Template)
+      render(val, nil, buf)
+    end
+
+    def dollar(buf, fn)
+      val = escape_html(plus("", fn))
+      render(val, nil, buf)
+    end
+
+    def greater(buf, fn)
+      val = evaluate(fn)
+      val = self.class.compile(val) if String === val
+      val = val.call if Proc === val and val.arity<=0
+      render(val, nil, buf)
+    end
+
+  end
+  include HighOrderFunctions
+
+  default_options :autospacing => true
+  tag '+', :plus
+  tag '$', :dollar
+  tag '>', :greater
+
+end # class Ybib
+
 root  = Path.dir.parent
 html  = root/"pages/layouts/html5.html"
 pages = root/"pages"
@@ -11,10 +63,10 @@ partials = pages.glob("**/*.html").each_with_object({}) do |pf,h|
 end
 
 page_prefix = page.relative_to(pages).to_s.gsub(%r{[^/]},"").gsub(%r{[/]}, "../")
-page_html = WLang::Html.render(page.read, partials.merge({
+page_html = Ybib.render(page.read, partials.merge({
   page_prefix: page_prefix
 }))
-rendered  = WLang::Html.render(html.read, {
+rendered  = Ybib.render(html.read, {
   yield: page_html,
   body_class: page.basename.rm_ext.to_s,
   page_prefix: page_prefix
