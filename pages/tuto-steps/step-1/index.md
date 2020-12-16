@@ -1,5 +1,11 @@
 # Step 1 - Webspicy is a bit like `curl`
 
+Please make sure your are on step 1 in your terminal by typing:
+
+```
+bin/step 1
+```
+
 In this first step, we will show you that `webspicy` is a simple HTTP client, a bit like `curl`. The difference is that it allows making *assertions* about the content received from an API.
 
 ## Let's compare `curl` and `webspicy`

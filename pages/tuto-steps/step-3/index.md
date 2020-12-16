@@ -1,5 +1,11 @@
 # Step 3 - It ensures robustness too
 
+Please make sure your are on step 1 in your terminal by typing:
+
+```
+bin/step 3
+```
+
 In `todo-spec/todos/getOne.yml` we can find the specification of the `GET /todos/:id` endpoint.
 
 Let's see if the API is robust.
