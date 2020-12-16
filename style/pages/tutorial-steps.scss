@@ -13,10 +13,11 @@
     a:visited {
       color: white;
       width: 50%;
+      white-space: nowrap;
     }
 
     a:hover {
-      color: $main-color-darken;
+      color: $main-color;
     }
   }
   &-main {
