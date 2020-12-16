@@ -72,9 +72,16 @@
       &.next,
       &.prev {
         background-color: $dark-background;
-        color: white;
         &:hover {
-          background-color: $bold-color;
+          background-color: white;
+          color: $dark-background !important;
+        }
+      }
+    }
+    li {
+      .btn {
+        &:hover {
+          background-color: $second-color;
         }
       }
     }
@@ -161,7 +168,9 @@ body.step-0 {
         width: calc(100% + 30px);
       }
       .prev {
-        visibility: hidden;
+        pointer-events: none;
+        background-color: lighten($dark-background, 20%);
+        opacity: .5;
       }
     }
   }
@@ -209,6 +218,14 @@ body.step-0 {
                 }
               }
             }
+          }
+        }
+      }
+      li {
+        .btn {
+          color: white !important;
+          &:hover {
+            background-color: transparent;
           }
         }
       }

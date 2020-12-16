@@ -127,8 +127,7 @@ footer {
 @mixin active-nav-tuto {
   border: 3px solid $second-color;
   @media (max-width: 1023px) {
-    border: 0;
-    bottom: -3px;
+    border-color: transparent;
     &:before {
       background-color: white !important;
       bottom: 30px !important;
