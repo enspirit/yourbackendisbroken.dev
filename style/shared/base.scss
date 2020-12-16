@@ -119,14 +119,15 @@ code {
   border-radius: 10px;
   outline: none;
   border: 3px solid $main-color;
-  transition: box-shadow var(--transition-delay), color var(--transition-delay);
+  transition: background-color var(--transition-delay), color var(--transition-delay);
   &.no-border {
     border: none;
   }
   &:hover {
     cursor: pointer;
-    box-shadow: inset 0 0 0 2em adjust-hue($main-color, 0%);
+    background-color: $main-color;
     color: white;
+    transition: background-color var(--transition-delay), color var(--transition-delay);
   }
 }
 
