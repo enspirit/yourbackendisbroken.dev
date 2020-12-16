@@ -57,12 +57,25 @@ footer {
   text-align: center;
 }
 .footer {
-  position: fixed;
   width: 100%;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
+
+  .terms-privacy {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    a, a:visited, a:hover {
+      color: white;
+      letter-spacing: initial;
+    }
+    p {
+      padding: 0px 15px;
+    }
+    p + p {
+      border-left: 1px solid white;
+    }
+  }
 }
 
 .main-nav {
@@ -77,6 +90,8 @@ footer {
   border-bottom-left-radius: 10px;
   font-size: 1.4em;
   z-index: 10; // above pre code blocks
+  display: flex;
+  justify-content: center;
   > a,
   > a:visited {
     font-family: $text-font;
@@ -87,6 +102,15 @@ footer {
   > a:hover {
     color: $main-color;
     cursor: pointer;
+  }
+  .logo {
+    position: absolute;
+    right: 0;
+    padding: 19px 20px;
+    svg {
+      width: 30px;
+      fill: white;
+    }
   }
 }
 
