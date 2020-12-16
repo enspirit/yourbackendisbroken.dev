@@ -16,10 +16,7 @@ services:
     .
 
   output_schema: |-
-    [{
-      id: Integer
-      description: String
-    }]
+    Todo.Collection
 
   error_schema: |-
     .

@@ -1,0 +1,16 @@
+@import finitio/data
+
+Todo.Ref = {
+  id: Integer
+}
+
+Todo.Full = {
+  id: Integer
+  description: String
+}
+
+Todo.Collection = [Todo.Full]
+
+Todo.Create = {
+  description: String
+}

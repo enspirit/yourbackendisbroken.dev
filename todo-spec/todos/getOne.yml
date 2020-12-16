@@ -13,15 +13,10 @@ services:
     Returns the specified todo
 
   input_schema: |-
-    {
-      id: Integer
-    }
+    Todo.Ref
 
   output_schema: |-
-    {
-      id: Integer
-      description: String
-    }
+    Todo.Full
 
   error_schema: |-
     .
@@ -37,3 +32,13 @@ services:
         status: 200
       assert:
         - "pathFD('', id: 6, description: 'Use counter examples')"
+
+  counterexamples:
+
+    - description: |-
+        when requesting a non existent todo
+      params:
+        id: 9999
+      expected:
+        content_type: text/plain
+        status: 404
