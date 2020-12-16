@@ -12,4 +12,4 @@ fi
 NEXT_STEP_NUMBER=$((`echo $CURRENT_STEP | cut -d'-' -f2` + 1))
 
 git reset --hard HEAD 2>&1 > /dev/null
-git checkout step-$NEXT_STEP_NUMBER
+git checkout step-$NEXT_STEP_NUMBER 2>&1 > /dev/null

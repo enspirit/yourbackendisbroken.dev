@@ -9,4 +9,4 @@ if [ $CURRENT_COMMIT == $STEP_1 ]; then
 fi
 
 git reset --hard HEAD 2>&1 > /dev/null
-git checkout HEAD^1
+git checkout HEAD^1 2>&1 > /dev/null

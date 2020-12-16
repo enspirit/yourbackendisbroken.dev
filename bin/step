@@ -20,4 +20,4 @@ if [ $STEP -lt 1 ]; then
 fi
 
 git reset --hard HEAD 2>&1 > /dev/null
-git checkout step-$STEP
+git checkout step-$STEP 2>&1 > /dev/null
