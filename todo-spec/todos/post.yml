@@ -1,0 +1,56 @@
+---
+name: |-
+  Todo
+
+url: |-
+  /todos/
+
+services:
+- method: |-
+    POST
+
+  description: |-
+    Creates a new todo
+
+  input_schema: |-
+    Todo.Create
+
+  output_schema: |-
+    Todo.Full
+
+  error_schema: |-
+    Any
+
+  examples:
+
+    - description: |-
+        when requested
+      params:
+        description: "Use input schemas"
+      expected:
+        content_type: application/json
+        status: 200
+      assert:
+        - "pathFD('', id: 7, description: 'Use input schemas')"
+
+  counterexamples:
+
+    - description: |-
+        when requested with wrong input schema
+      dress_params: false
+      params:
+        comment: "Use input schemas"
+      expected:
+        content_type: application/json
+        status: 400
+        error: ""
+
+    - description: |-
+        when requested with wrong input type
+      dress_params: false
+      params:
+        description: 7
+      expected:
+        content_type: application/json
+        status: 400
+        error: ""
