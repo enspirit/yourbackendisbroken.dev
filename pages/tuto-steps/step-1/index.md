@@ -49,7 +49,7 @@ flag:
 webspicy --debug http://127.0.0.1:3000/version
 ```
 
-```
+```yaml
 ---
 name: |-
   Default specification
