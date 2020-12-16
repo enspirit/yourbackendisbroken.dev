@@ -4,7 +4,7 @@ node_modules
 .DS_Store
 .nyc_output/
 coverage
-todo-spec/rspec.xml
+rspec.xml
 package-lock.json
 Dockerfile.log
 Dockerfile.built
