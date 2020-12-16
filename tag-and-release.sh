@@ -1,11 +1,15 @@
 #!/bin/bash
+##
+## Use this script to recreate the tags for the tutorial step
+## Usage: ./tag-and-release.sh <sha commit of step 1>
+##
 
 if [ "$#" -ne 1 ]; then
   echo "Usage: $0 <sha>"
   exit
 fi
 
-STEP_0_SHA=$1
+STEP_1_SHA=$1
 
 if [ ! -z "$(git status --porcelain)" ]; then
   echo "!!! This script can only run on a clean git clone !!!"
@@ -18,7 +22,7 @@ fi
 LAST_COMMIT=`git log --reverse --pretty=%H nodejs-tuto | tail -n1`
 
 # Current step
-STEP=0
+STEP=1
 
 function gitnext {
   CURRENT_COMMIT=`git rev-parse HEAD`
@@ -29,13 +33,16 @@ function gitnext {
 }
 
 function gittag {
+  git tag -f "step-$STEP"
   STEP=$((STEP+1))
-  git tag -f "step-$1"
 }
 
 # Jump to step 0 commit
-git checkout $STEP_0_SHA
+git checkout $STEP_1_SHA
 gittag $STEP
 while gitnext; do
-  gittag $STEP
+  gittag
 done
+
+# Go back to HEAD of branch
+git checkout nodejs-tuto

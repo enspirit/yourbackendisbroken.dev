@@ -13,7 +13,6 @@ fi
 supervisord
 clear
 
-cat .tutorial/banner.txt
 ./bin/start
 
 bash
