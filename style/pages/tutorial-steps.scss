@@ -1,4 +1,16 @@
 .tutorials {
+  &::before {
+    content: "";
+    width: 30%;
+    height: 40%;
+    mask: url(../../assets/circle.svg) no-repeat center;
+    -webkit-mask: url(../../assets/circle.svg) no-repeat center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(45deg, #eb008c 35%, #54e8dd 70%);
+  }
   padding: 100px 20px;
   display: grid;
   grid-template-areas:
@@ -212,6 +224,7 @@ body.step-0 {
                 margin-top: 1px;
                 margin-left: -10px;
                 width: max-content;
+                color: $second-color !important;
                 &:before {
                   bottom: 31px !important;
                   left: 20px;
