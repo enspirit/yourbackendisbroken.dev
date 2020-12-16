@@ -69,10 +69,10 @@ Dockerfile.pushed: Dockerfile.built
 push-image: Dockerfile.pushed
 
 run: image
-	docker run -p 8080:80 enspirit/yourbackendisbroken:website
+	docker run -p 8081:80 enspirit/yourbackendisbroken:website
 
 dev:
-	docker run -v $$PWD/site:/usr/share/nginx/html/ -p 8080:80 nginx
+	docker run -v $$PWD/site:/usr/share/nginx/html/ -p 8081:80 nginx
 
 Dockerfile.hack.built: Dockerfile.hack Makefile
 	docker build -t enspirit/yourbackendisbroken:website-hack --file Dockerfile.hack .  | tee Dockerfile.hack.log
