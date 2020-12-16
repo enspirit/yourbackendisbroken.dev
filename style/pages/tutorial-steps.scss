@@ -2,13 +2,12 @@
   padding: 100px 20px;
   display: grid;
   grid-template-areas:
-    "tutorial-nav tutorial-main"
-    "tutorial-nav tutorial-footer";
-  grid-template-columns: 2fr 10fr;
+    "tutorial-main"
+    "tutorial-nav"
+    "tutorial-footer";
   &-nav {
     grid-area: tutorial-nav;
     text-align: left;
-    position: fixed;
     a,
     a:visited {
       color: white;
@@ -23,6 +22,7 @@
   &-main {
     grid-area: tutorial-main;
     text-align: left;
+    margin-bottom: 100px;
     h2 {
       margin-top: 3em;
       &:first-of-type {
@@ -35,6 +35,49 @@
   }
   &-footer {
     grid-area: tutorial-footer;
+    background-color: $bold-color;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    left: 0;
+    &::before {
+      content: "";
+      width: calc(100% + 20px);
+      height: 100%;
+      margin-left: -20px;
+      background-color: $bold-color;
+      position: absolute;
+    }
+    * {
+      z-index: 1; // above :before
+    }
+    .tutorial-nav {
+      ul {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        li {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    .btn {
+      background-color: transparent;
+      border: 3px solid transparent;
+      color: white;
+      font-weight: bold;
+      padding: 5px 10px;
+      margin: 15px;
+      &.next,
+      &.prev {
+        background-color: $dark-background;
+        color: white;
+        &:hover {
+          background-color: $bold-color;
+        }
+      }
+    }
   }
 
   summary {
@@ -98,7 +141,8 @@
 
 .step-0,
 .step-1,
-.step-2 {
+.step-2,
+.step-3 {
   nav > a.tutorial {
     @include active-nav;
   }
@@ -106,33 +150,65 @@
 
 footer.tutorials-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 30;
-  .next {
-    margin-left: auto;
+}
+
+body.step-0 {
+  .tutorials {
+    &-footer {
+      &::before {
+        width: calc(100% + 30px);
+      }
+      .prev {
+        visibility: hidden;
+      }
+    }
   }
 }
 
 @media (max-width: 1023px) {
   .tutorials {
-    grid-template-columns: 12fr;
-    grid-template-areas:
-      "tutorial-main"
-      "tutorial-nav"
-      "tutorial-footer";
     padding: 50px 0;
-    &-nav {
-      position: relative;
-      margin-top: 50px;
-      overflow: auto;
-      ul {
-        display: flex;
-        margin: auto;
-        padding: 5px;
-        li {
-          margin: 5px;
-          a {
-            width: auto;
+    &-footer {
+      > * {
+        flex: 0 1 auto;
+      }
+      .tutorial-nav {
+        ul {
+          justify-content: space-evenly;
+          li {
+            width: 30px;
+            a.btn {
+              visibility: hidden;
+              padding: 5px 10px;
+              position: relative;
+              height: 100%;
+              margin: 0;
+              &::before {
+                content: "\A";
+                visibility: visible;
+                position: absolute;
+                bottom: 30px;
+                width:10px;
+                height:10px;
+                border-radius:50%;
+                background: black;
+                display:inline-block;
+              }
+            }
+            &:hover {
+              a.btn {
+                visibility: visible;
+                margin-top: 1px;
+                margin-left: -10px;
+                width: max-content;
+                &:before {
+                  bottom: 31px !important;
+                  left: 20px;
+                }
+              }
+            }
           }
         }
       }

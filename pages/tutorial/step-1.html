@@ -1,8 +1,5 @@
 !{partials/nav}
 <section class="tutorials step-1">
-  <aside class="tutorials-nav">
-    !{partials/nav-tutorial}
-  </aside>
   <main class="tutorials-main">
     !{tuto-steps/step-1/index}
     <h2>FAQ</h2>
@@ -16,7 +13,8 @@
     </details>
   </main>
   <footer class="tutorials-footer">
-    <a class="btn small prev" href="+{page_prefix}tutorial/step-0.html">previous</a>
-    <a class="btn small next" href="+{page_prefix}tutorial/step-2.html">next</a>
+    <a class="btn prev" href="+{page_prefix}tutorial/step-0.html">Previous</a>
+    !{partials/nav-tutorial}
+    <a class="btn next" href="+{page_prefix}tutorial/step-2.html">Next</a>
   </footer>
 </section>

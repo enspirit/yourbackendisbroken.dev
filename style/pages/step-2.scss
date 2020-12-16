@@ -1,0 +1,5 @@
+body.step-2 {
+  .tutorial-nav a.step-2 {
+    @include active-nav-tuto;
+  }
+}
