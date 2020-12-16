@@ -8,8 +8,9 @@ RUN bundle install
 RUN npm install -g sass markdown-it-cli markdown-it-highlightjs
 
 COPY . /app
-RUN make clean html css
+RUN make clean site
 
 FROM nginx:alpine
 
-COPY --from=builder /app/site /app/scripts /usr/share/nginx/html/
+COPY --from=builder /app/site /usr/share/nginx/html/
+

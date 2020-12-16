@@ -38,15 +38,15 @@ html: site/index.html site/get-our-help.html site/tutorial.html site/extra-goodi
 site/index.css: $(shell find style -type f | grep -v ".DS_Store")
 	sass style/index.scss > site/index.css
 
-css: site/index.css
+site/scripts: $(shell find scripts -type f | grep -v ".DS_Store")
+	rm -rf site/scripts
+	cp -r scripts site/scripts
 
 site/assets:
 	mkdir -p site/assets
 	cat assets/circle.svg > site/assets/circle.svg
 
-assets: site/assets
-
-site: site/tutorial html css assets
+site: site/tutorial html site/index.css site/assets site/scripts
 all: site
 
 clean:
