@@ -20,14 +20,14 @@ Let's add one:
 counterexamples:
 
   - description: |-
-      when requesting a non existent todo
+      it fails with a 404 for non existent todo
     params:
       id: 9999
     expected:
       content_type: text/plain
       status: 404
     assert:
-      - match(/Not found/)
+      - match(/Not Found/)
 ```
 
 And let's run webspicy:
