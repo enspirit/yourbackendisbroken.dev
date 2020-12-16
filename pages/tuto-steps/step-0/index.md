@@ -33,7 +33,7 @@ docker run -it \
 
 This command will create a `yourbackendisbroken` folder in which you will find the code used in this tutorial.
 
-After running the command, you should be greeted by `webspicy`. The tutorial is now running on http://127.0.0.1:8080/, where some API logs are also served.
+After running the command, you should be greeted by `webspicy`.
 
 ## Clone the github repository
 
