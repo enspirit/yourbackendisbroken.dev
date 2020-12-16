@@ -24,14 +24,9 @@ the following commands are available for you:
 - bin/next: moves to the next step of this tutorial
 - bin/previous: moves to the previous step
 
-The API is running on http://localhost:3000
+The API is running on http://localhost:3000 and you'll find its
+logs in /tmp/api.logs
+
+Go back to your browser, you are ready for "Step 1" of the tutorial.
+
 EOF
-
-if [ -z "$GITPOD_REPO_ROOT" ]; then
-  cat <<-EOF
-
-You are now ready for "Step 1", open http://localhost:8080 in your browser.
-EOF
-fi
-
-echo ""
