@@ -2,6 +2,44 @@ body.why {
   nav > a.why {
     @include active-nav;
   }
+  &::before {
+    content: "";
+    width: 600px;
+    height: 600px;
+    mask: url(../../assets/circle.svg) no-repeat center;
+    -webkit-mask: url(../../assets/circle.svg) no-repeat center;
+    position: absolute;
+    top: -30px;
+    left: -100px;
+    z-index: -1;
+    background: linear-gradient(45deg, #7e3f97 35%, #4d54ff 70%);
+  }
+
+  ol {
+
+    &.element-rigth::before {
+      background: linear-gradient(45deg, #eb008c 35%, #ff6462 70%);
+      right: 0;
+    }
+
+
+    &.element-left::before {
+      background: linear-gradient(45deg, #7e3f97 35%, #4d54ff 70%);
+      left: 0;
+    }
+
+    &::before {
+      content: "";
+      width: 600px;
+      height: 600px;
+      mask: url(../../assets/circle.svg) no-repeat center;
+      -webkit-mask: url(../../assets/circle.svg) no-repeat center;
+      position: absolute;
+      z-index: -1;
+      transform: translateY(-150px);
+    }
+  }
+
   section {
     padding-top: 100px;
     max-width: 800px;

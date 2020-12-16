@@ -2,6 +2,33 @@ body.tutorial {
   nav > a.tutorial {
     @include active-nav;
   }
+
+  &::before {
+    content: "";
+    width: 700px;
+    height: 700px;
+    mask: url(../../assets/circle.svg) no-repeat center;
+    -webkit-mask: url(../../assets/circle.svg) no-repeat center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(45deg, #eb008c 35%, #54e8dd 70%);
+  }
+
+  section {
+    width: 35%;
+    margin: auto 20%;
+    text-align: left;
+    padding-top: 250px;
+  }
+
+  h1 {
+    font-size: 50px;
+    span {
+      color: $second-color;
+    }
+  }
   ol {
     font-size: 1.6em;
     > li {

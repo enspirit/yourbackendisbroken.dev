@@ -4,12 +4,12 @@ body.extra-goodies {
   }
   &::before {
     content: "";
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
     mask: url(../../assets/circle.svg) no-repeat center;
     -webkit-mask: url(../../assets/circle.svg) no-repeat center;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: -30px;
     left: 50%;
     transform: translate(-50%);
     z-index: -1;
