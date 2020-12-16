@@ -27,9 +27,10 @@ the following commands are available for you:
 The API is running on http://localhost:3000
 EOF
 
-if [ -z "$GITPOD_REPO_ROOT=" ]; then
+if [ -z "$GITPOD_REPO_ROOT" ]; then
   cat <<-EOF
-Point your browser to http://localhost:8080 to follow the tutorial.
+
+You are now ready for "Step 1", open http://localhost:8080 in your browser.
 EOF
 fi
 
