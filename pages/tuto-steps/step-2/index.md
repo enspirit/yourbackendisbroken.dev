@@ -23,6 +23,8 @@ We can improve our specification in two ways:
 
 1. We can change the output schema from `Any` to a stricter schema. Let's ensure we receive an actual array of Todo items.
 
+Edit the specification in `todo-spec/todos/getAll.yml` with your favorite editor and change the `output_schema` as follows:
+
 ```yaml
 output_schema: |-
   [{
