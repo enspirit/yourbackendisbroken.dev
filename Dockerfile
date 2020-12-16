@@ -7,7 +7,7 @@ ENV YBIB_BRANCH=${YBIB_BRANCH}
 ENV YBIB_REPO=${YBIB_REPO}
 ENV DOCKER_ENV=1
 ENV YBIB_TMUX_SESS=YBIBTMUX
-
+ENV VERSION=0.1
 ##
 RUN apk add --no-cache bash tmux git curl supervisor netcat-openbsd nodejs nodejs-npm
 
