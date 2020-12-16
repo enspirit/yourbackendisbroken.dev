@@ -4,7 +4,7 @@ In `todo-spec/todos/getOne.yml` we can find the specification of the `GET /todos
 
 Let's see if the API is robust.
 
-As with the `examples` section, webspicy supports a `counterexamples` section.
+As with the `examples` section, `webspicy` supports a `counterexamples` section.
 
 Let's add one:
 
@@ -18,6 +18,8 @@ counterexamples:
     expected:
       content_type: text/plain
       status: 404
+    assert:
+      - match(/Not found/)
 ```
 
 And let's run webspicy:
