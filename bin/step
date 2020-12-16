@@ -1,0 +1,23 @@
+#!/bin/bash
+
+LAST_STEP=`git tag -l | grep step- | sort | tail -n 1`
+LAST_STEP_NUMBER=`echo $LAST_STEP | cut -d'-' -f2`
+
+if [ ! $# -eq 1 ]; then
+  echo "Usage $0 N where 1 <= N <= $STEP_MAX"
+  exit
+fi
+
+STEP=$1
+if [ $STEP -gt $LAST_STEP_NUMBER ]; then
+  echo "We only have $LAST_STEP_NUMBER steps"
+  exit
+fi
+
+if [ $STEP -lt 1 ]; then
+  echo "The tutorial only starts at step 1 ;)"
+  exit
+fi
+
+git reset --hard HEAD 2>&1 > /dev/null
+git checkout step-$STEP
