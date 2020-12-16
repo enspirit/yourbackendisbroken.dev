@@ -44,7 +44,7 @@ li,
 input,
 a {
   font-family: $text-font;
-  font-size: 16pt;
+  font-size: 13pt;
 }
 
 p,
@@ -68,9 +68,10 @@ footer {
     a, a:visited, a:hover {
       color: white;
       letter-spacing: initial;
+      font-size: 10pt;
     }
     p {
-      font-size: 14pt;
+      font-size: 10pt;
       padding: 0px 15px;
     }
     p + p {

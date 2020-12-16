@@ -2,4 +2,51 @@ body.get-our-help {
   nav > a.get-our-help {
     @include active-nav;
   }
+
+  h2 {
+    font-size: 26pt;
+  }
+
+  section {
+    min-height: calc(100vh - 481px);
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    mask: url(../../assets/circle.svg) no-repeat center;
+    -webkit-mask: url(../../assets/circle.svg) no-repeat center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top:0;
+    z-index: -1;
+    background: linear-gradient(45deg, #eb008c 35%, #ff6462 70%);
+  }
+
+  .card {
+    text-align: left;
+    background-color: $dark-background;
+    box-shadow: 0 2pt 29pt 0 rgba(0, 0, 0, 0.25);
+    border-radius: 7pt;
+    width: 510px;
+    padding-left: 50px;
+
+    &-1 {
+      position: relative;
+      top: -140px;
+    }
+
+    &-2 {
+      position: relative;
+      top: 30px;
+    }
+
+    li::before {
+      content: "\2014 ";
+      color: #E6068E;
+      padding-right: 10px;
+    }
+  }
 }
