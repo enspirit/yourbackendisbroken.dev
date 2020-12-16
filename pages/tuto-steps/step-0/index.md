@@ -22,14 +22,16 @@ The tutorial instructions are fully integrated in the Gitpod experience:
 We provide a [Docker](https://docker.io/) image that automatically clones our github repository on your computer and give you a shell to execute `webspicy` commands on an existing (broken) backend written in node.js.
 
 ```
-mkdir yourbackendisbroken
-cd yourbackendisbroken
+docker pull enspirit/yourbackendisbroken
 docker run -it \
   -p 3000:3000 \
   -p 8080:8080 \
-  -v $PWD:/ybib \
+  -v $PWD/yourbackendisbroken:/ybib \
+  --user ${UID}:${GID} \
   enspirit/yourbackendisbroken
 ```
+
+This command will create a `yourbackendisbroken` folder in which you will find the code used in this tutorial.
 
 After running the command, you should be greeted by `webspicy`. The tutorial is now running on http://127.0.0.1:8080/, where some API logs are also served.
 
