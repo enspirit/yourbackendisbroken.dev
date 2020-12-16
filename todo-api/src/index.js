@@ -5,18 +5,26 @@ const morgan = require('morgan');
 
 const app = express();
 const port = 3000;
+
 const todos = [{
-  id: 1, description: 'one'
+  id: 1,
+  description: 'Read yourwebsiteisbrokend.dev'
 }, {
-  id: 2, description: 'two'
+  id: 2,
+  description: 'Install webspicy, and wear your mask'
 }, {
-  id: 3, description: 'three'
+  id: 3,
+  description: 'Write your first specification'
 }, {
-  id: 4, description: 'four'
+  id: 4,
+  description: 'Use output schemas'
 }, {
-  id: 5, description: 'five'
-}
-];
+  id: 5,
+  description: 'Use assertions on output'
+}, {
+  id: 6,
+  description: 'Use counter examples'
+}];
 
 function getTodos() {
   return todos;
