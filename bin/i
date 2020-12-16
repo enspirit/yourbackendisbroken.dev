@@ -31,12 +31,12 @@ class Ybib < WLang::Dialect
       render(val, nil, buf)
     end
 
-    def dollar(buf, fn)
+    def caret(buf, fn)
       val = escape_html(plus("", fn))
       render(val, nil, buf)
     end
 
-    def greater(buf, fn)
+    def bang(buf, fn)
       val = evaluate(fn)
       val = self.class.compile(val) if String === val
       val = val.call if Proc === val and val.arity<=0
@@ -48,8 +48,8 @@ class Ybib < WLang::Dialect
 
   default_options :autospacing => true
   tag '+', :plus
-  tag '$', :dollar
-  tag '>', :greater
+  tag '^', :caret
+  tag '!', :bang
 
 end # class Ybib
 

@@ -11,7 +11,7 @@ curl http://127.0.0.1:3000/version
 ```
 
 ```
- {"name":"TODOS API","version":"0.0.1"}
+{"name":"TODOS API","version":"0.0.1"}
 ```
 
 Let's now do the same using webspicy:
