@@ -21,3 +21,9 @@ fi
 
 git reset --hard HEAD > /dev/null 2>&1
 git checkout step-$STEP > /dev/null 2>&1
+
+clear
+
+# Banner for current (new) step
+CURRENT_STEP=`git describe --tags`
+.tutorial/banner "$CURRENT_STEP"

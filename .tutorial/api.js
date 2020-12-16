@@ -18,7 +18,8 @@ const io = require("socket.io")(http, {
   }
 });
 
-// Send commands to the main terminal the user uses
+// Send commands to the main terminal of the tutorial
+// (for gitpod/docker experiences)
 const runCmd = (cmd) => {
   console.log('running cmd > ', cmd);
   // // Ctrl-C to make sure no user-typed command is pretyped
