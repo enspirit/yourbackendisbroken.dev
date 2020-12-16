@@ -6,6 +6,8 @@ Please make sure your are on step 1 in your terminal by typing:
 bin/step 3
 ```
 
+## Testing the robustness against a unexisting TODO
+
 In `todo-spec/todos/getOne.yml` we can find the specification of the `GET /todos/{id}` endpoint.
 
 Let's see if the API is robust.
@@ -31,7 +33,7 @@ counterexamples:
 And let's run webspicy:
 
 ```
-webspicy todo-spec/todos/getOne.yml
+webspicy --debug todo-spec/todos/getOne.yml
 ```
 
 Feel like fixing the API for us before you move on? Edit `todo-api/src/index.js`.

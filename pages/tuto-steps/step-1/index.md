@@ -2,13 +2,13 @@
 
 Please make sure your are on step 1 in your terminal by typing:
 
+## Let's compare `curl` and `webspicy`
+
 ```
 bin/step 1
 ```
 
 In this first step, we will show you that `webspicy` is a simple HTTP client, a bit like `curl`. The difference is that it allows making *assertions* about the content received from an API.
-
-## Let's compare `curl` and `webspicy`
 
 If you completed step 0, you should be able to reach our API example with curl:
 

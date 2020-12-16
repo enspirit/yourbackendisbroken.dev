@@ -6,6 +6,8 @@ Please make sure your are on step 2 in your terminal by typing:
 bin/step 2
 ```
 
+## Running a test against our own specification
+
 In this second step we are going to test a simple `GET` endpoint.
 Our API is currently serving a list of Todo items on `/todos`.
 
@@ -14,7 +16,7 @@ We start by creating a yaml file describing the specification of the endpoint. (
 Let's run webspicy:
 
 ```
-webspicy todo-spec/todos/getAll.yml
+webspicy --debug todo-spec/todos/getAll.yml
 ```
 
 ## Let's assert some more
@@ -48,5 +50,7 @@ assert:
 Let's run webspicy again:
 
 ```
-webspicy todo-spec/todos/getAll.yml
+webspicy --debug todo-spec/todos/getAll.yml
 ```
+
+Try changing the assertions so that the test fails, and see what happens.
