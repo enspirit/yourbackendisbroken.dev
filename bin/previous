@@ -8,5 +8,5 @@ if [ $CURRENT_COMMIT == $STEP_1 ]; then
   exit
 fi
 
-git reset --hard HEAD 2>&1 > /dev/null
-git checkout HEAD^1 2>&1 > /dev/null
+git reset --hard HEAD > /dev/null 2>&1
+git checkout HEAD^1 > /dev/null 2>&1

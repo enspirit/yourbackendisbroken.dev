@@ -19,5 +19,5 @@ if [ $STEP -lt 1 ]; then
   exit
 fi
 
-git reset --hard HEAD 2>&1 > /dev/null
-git checkout step-$STEP 2>&1 > /dev/null
+git reset --hard HEAD > /dev/null 2>&1
+git checkout step-$STEP > /dev/null 2>&1
