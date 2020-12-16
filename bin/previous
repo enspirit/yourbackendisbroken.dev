@@ -1,8 +1,12 @@
 #!/bin/bash
 
-git reset --hard HEAD
-git checkout HEAD^1
+STEP_1=`git rev-list -n 1 step-1`
+CURRENT_COMMIT=`git rev-parse HEAD`
 
-if [ -e $GITPOD_REPO_ROOT/.tutorial/start.sh ]; then
-  $GITPOD_REPO_ROOT/.tutorial/start.sh
-fi;
+if [ $CURRENT_COMMIT == $STEP_1 ]; then
+  echo "You are already at the beginning of this tutorial ;-)"
+  exit
+fi
+
+git reset --hard HEAD 2>&1 > /dev/null
+git checkout HEAD^1

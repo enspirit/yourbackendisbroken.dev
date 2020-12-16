@@ -1,8 +1,15 @@
 #!/bin/bash
 
-git reset --hard HEAD
-git log --reverse --pretty=%H nodejs-tuto | awk "/$(git rev-parse HEAD)/{getline;print}" | xargs git checkout
+LAST_STEP=`git tag -l | grep step- | sort | tail -n 1`
+CURRENT_STEP=`git describe --tags`
 
-if [ -e $GITPOD_REPO_ROOT/.tutorial/start.sh ]; then
-  $GITPOD_REPO_ROOT/.tutorial/start.sh
-fi;
+if [ $CURRENT_STEP == $LAST_STEP ]; then
+  echo "You are already at the end of this tutorial ;-)"
+  echo "If you feel like starting it again, run bin/start"
+  exit
+fi
+
+NEXT_STEP_NUMBER=$((`echo $CURRENT_STEP | cut -d'-' -f2` + 1))
+
+git reset --hard HEAD 2>&1 > /dev/null
+git checkout step-$NEXT_STEP_NUMBER
