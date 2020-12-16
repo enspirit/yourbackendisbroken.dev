@@ -27,7 +27,10 @@ site/tutorial/step-0.html: pages/tutorial/step-0.html pages/tuto-steps/step-0/in
 site/tutorial/step-1.html: pages/tutorial/step-1.html pages/tuto-steps/step-1/index.html site/tutorial $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
 	bundle exec ruby bin/i pages/tutorial/step-1.html > site/tutorial/step-1.html
 
-html: site/index.html site/get-our-help.html site/tutorial.html site/extra-goodies.html site/why.html site/tutorial/step-0.html site/tutorial/step-1.html
+site/tutorial/step-2.html: pages/tutorial/step-2.html pages/tuto-steps/step-2/index.html site/tutorial $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
+	bundle exec ruby bin/i pages/tutorial/step-2.html > site/tutorial/step-2.html
+
+html: site/index.html site/get-our-help.html site/tutorial.html site/extra-goodies.html site/why.html site/tutorial/step-0.html site/tutorial/step-1.html site/tutorial/step-2.html
 
 site/index.css: $(shell find style -type f | grep -v ".DS_Store")
 	sass style/index.scss > site/index.css
