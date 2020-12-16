@@ -1,0 +1,28 @@
+---
+url: |-
+  /todos
+
+method: |-
+  GET
+
+description: |-
+  Returns the collection of todos
+
+input_schema: |-
+  Any
+
+output_schema: |-
+  Any
+
+error_schema: |-
+  Any
+
+examples:
+
+  - description: |-
+      when requested
+    expected:
+      content_type: application/json
+      status: 200
+    assert:
+      - size(6)
