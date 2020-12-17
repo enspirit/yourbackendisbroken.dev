@@ -1,5 +1,0 @@
-body.step-6 {
-  .tutorial-nav a.step-6 {
-    @include active-nav-tuto;
-  }
-}

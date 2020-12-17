@@ -11,6 +11,18 @@
         width: 80%;
         margin: 0 auto;
       }
+      .news-letter {
+        form {
+          display: block;
+          background-color: transparent;
+        }
+        input[type="email"] {
+          background: $darker-background;
+          width: 100%;
+          height: 50px;
+          margin-bottom: 20px;
+        }
+      }
       .twitter {
         padding: 10px 20px;
         margin: 20px auto;
@@ -30,6 +42,11 @@
         width: 70%;
         margin-top: 50px;
       }
+
+      .card-3 {
+        left: 0;
+        top: 130px;
+      }
     }
     &.tutorial {
       &:before {
@@ -39,6 +56,7 @@
         width: 80%;
         margin: 0 auto;
         padding-top: 50px;
+        padding-bottom: 50px;
       }
     }
     &.why {
