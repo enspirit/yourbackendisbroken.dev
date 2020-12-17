@@ -10,7 +10,7 @@ bin/step 1
 
 In this first step, we will show you that `webspicy` is a simple HTTP client, a bit like `curl`. The difference is that it allows making *assertions* about the content received from an API.
 
-If you completed step 0, you should be able to reach our API example with curl:
+If you completed the intro, you should be able to reach our API example with curl:
 
 ```bash
 curl http://127.0.0.1:3000/version
