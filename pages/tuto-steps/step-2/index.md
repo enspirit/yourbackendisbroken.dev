@@ -53,4 +53,4 @@ Let's run webspicy again:
 webspicy --debug todo-spec/todos/getAll.yml
 ```
 
-Try changing the assertions so that the test fails, and see what happens.
+Try changing the assertions so that the test fails and see what happens.
