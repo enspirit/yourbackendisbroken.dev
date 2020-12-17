@@ -6,7 +6,7 @@ Please make sure your are on step 3 in your terminal by typing:
 bin/step 3
 ```
 
-## Testing the robustness against a unexisting TODO
+## Testing the robustness against an non existent TODO
 
 In `todo-spec/todos/getOne.yml` we can find the specification of the `GET /todos/{id}` endpoint.
 
