@@ -8,7 +8,7 @@ ENV YBIB_REPO=${YBIB_REPO}
 ENV DOCKER_ENV=1
 ENV VERSION=0.1
 ##
-RUN apk add --no-cache bash git curl supervisor netcat-openbsd nodejs nodejs-npm
+RUN apk add --no-cache bash git curl supervisor netcat-openbsd nodejs nodejs-npm vim
 
 # disable warnings in ruby
 ENV RUBYOPT="-W0"
@@ -25,7 +25,7 @@ WORKDIR /ybib
 # Supervisord, entrypoint, scripts, ...
 RUN mkdir -p /run/nginx/ /usr/share/nginx/html
 COPY .tutorial/supervisord.conf /etc/
-COPY .tutorial/curlrc $HOME/.curlrc
+COPY .tutorial/.curlrc .tutorial/.vimrc $HOME/
 COPY .tutorial/entrypoint.sh .tutorial/start-api.sh /
 
 # Tutorial api & webpages
