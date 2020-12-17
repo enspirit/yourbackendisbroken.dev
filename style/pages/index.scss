@@ -24,7 +24,7 @@ body.index {
 
   section {
     padding: 80px;
-
+    padding-bottom: 40px;
     span {
       font-weight: bold;
       color: $bold-color;
@@ -53,6 +53,7 @@ body.index {
     width: max-content;
     margin: auto;
     padding: 20px;
+    margin-top: 40px;
 
     form {
       display: flex;

@@ -17,7 +17,7 @@ body.get-our-help {
     height: 100%;
     mask: url(../../assets/circle.svg) no-repeat center;
     -webkit-mask: url(../../assets/circle.svg) no-repeat center;
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translate(-50%);
     top:0;
@@ -40,7 +40,13 @@ body.get-our-help {
 
     &-2 {
       position: relative;
-      top: 30px;
+      top: 60px;
+    }
+
+    &-3 {
+      position: relative;
+      top: 10px;
+      left: -315px;
     }
 
     li::before {
