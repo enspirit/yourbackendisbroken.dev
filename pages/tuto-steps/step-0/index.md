@@ -23,6 +23,7 @@ We provide a [Docker](https://docker.io/) image that automatically clones our gi
 
 ```bash
 docker pull enspirit/yourbackendisbroken
+mkdir yourbackendisbroken
 docker run -it \
   -p 3000:3000 \
   -p 8080:8080 \
