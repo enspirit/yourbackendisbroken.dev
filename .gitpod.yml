@@ -4,7 +4,7 @@ image:
 # Workspace startup
 tasks:
   - init: supervisord
-    command: clear && gp await-port 3000 && tmux new -s $YBIB_TMUX_SESS "./bin/start && bash"
+    command: clear && gp await-port 3000 && ./bin/start
 
 # Ports to expose on workspace
 ports:
