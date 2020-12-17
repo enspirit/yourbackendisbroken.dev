@@ -8,9 +8,9 @@ bin/step 4
 
 ## Summary of earlier steps
 
-In Step 2 and Step 3, we saw that we can call web services
+In Step 2 and Step 3 we saw that we can call web services
 and assert some properties on both the response headers and output.
-Step 2 contributed a test *example*, and Step 3 a *counterexample*.
+Step 2 contributed a test *example* and Step 3, a *counterexample*.
 
 We can now execute the entire test suite and see that it now
 passes:
