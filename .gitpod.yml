@@ -1,9 +1,10 @@
-image: enspirit/yourbackendisbroken
+image:
+  file: Dockerfile
 
 # Workspace startup
 tasks:
   - init: supervisord
-    command: clear && gp await-port 3000 && bin/start
+    command: clear && gp await-port 3000 && tmux new -s $YBIB_TMUX_SESS "./bin/start && bash"
 
 # Ports to expose on workspace
 ports:

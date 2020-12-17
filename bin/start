@@ -1,5 +1,7 @@
 #!/bin/bash
 
+declare -x GEM_HOME="/usr/local/bundle"
+
 git checkout step-1
 clear
 .tutorial/banner "webspicy"
