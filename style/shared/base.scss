@@ -101,6 +101,7 @@ footer {
     padding: 20px 0px;
     margin: 0 10px;
     color: white;
+    border-bottom: 4px solid transparent;
   }
   > a:hover {
     color: $main-color;
@@ -222,6 +223,7 @@ input:not([type="submit"]) {
   .main-nav {
     grid-area: nav;
     position: relative;
+    margin-top: -20px;
   }
   section {
     &:first-of-type {

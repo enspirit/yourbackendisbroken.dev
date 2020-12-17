@@ -175,10 +175,7 @@
   }
 }
 
-.step-0,
-.step-1,
-.step-2,
-.step-3 {
+body[class^="step"] {
   nav > a.tutorial {
     @include active-nav;
   }
@@ -239,12 +236,12 @@ body.step-0 {
               a.btn {
                 visibility: visible;
                 margin-top: 1px;
-                margin-left: -10px;
+                margin-left: -20px;
                 width: max-content;
                 color: $second-color !important;
                 &:before {
                   bottom: 31px !important;
-                  left: 20px;
+                  left: 30px;
                 }
               }
             }
