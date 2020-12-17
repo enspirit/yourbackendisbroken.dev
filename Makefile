@@ -16,13 +16,18 @@ start: image
 		-p 8080:8080 \
 		-v ${PWD}:/ybib \
 		--user ${UID}:${GID} \
+		-e YBIB_PWD=${PWD} \
 		enspirit/yourbackendisbroken
 
 tuto: image
+	rm -rf /tmp/tuto
 	mkdir -p /tmp/tuto
 	docker run -it \
 		-p 3000:3000 \
 		-p 8080:8080 \
+		-v /tmp/tuto:/ybib \
+		--user ${UID}:${GID} \
+		-e YBIB_PWD=${PWD} \
 		enspirit/yourbackendisbroken
 
 push-image: image

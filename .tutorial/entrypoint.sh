@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# We are running in docker
+export DOCKER_ENV=1
+
 # Clone the repository if not present (mounted as volume for instance)
 if [ ! -d .git ]; then
   git clone --branch $YBIB_BRANCH $YBIB_REPO ./
