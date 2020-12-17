@@ -1,7 +1,5 @@
 #!/bin/bash
 
-declare -x GEM_HOME="/usr/local/bundle"
-
 git checkout step-1
 clear
 .tutorial/banner "webspicy"
@@ -42,8 +40,10 @@ in $YBIB_PWD.
 EOF
 fi
 
+if [ -z "$GITPOD_REPO_ROOT" ]; then
 cat <<-EOF
 Go back to your browser, you are ready for "Step 1" of the tutorial.
 https://yourbackendisbroken.dev/tutorial/step-1.html
 
 EOF
+fi

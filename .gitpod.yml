@@ -4,7 +4,7 @@ image:
 # Workspace startup
 tasks:
   - init: supervisord
-    command: clear && gp await-port 3000 && ./bin/start
+    command: clear && gp await-port 3000 && .tutorial/gitpod.sh
 
 # Ports to expose on workspace
 ports:
