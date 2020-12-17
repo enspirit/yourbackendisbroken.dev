@@ -1,5 +1,4 @@
-image:
-  file: Dockerfile
+image: enspirit/yourbackendisbroken
 
 # Workspace startup
 tasks:
