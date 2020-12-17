@@ -17,22 +17,63 @@ body.tutorial {
   }
 
   section {
-    width: 35%;
     margin: auto 20%;
     text-align: left;
-    padding-top: 250px;
+    padding-top: 100px;
+    display: grid;
+    grid-template-areas:
+      "h1 video"
+      "list video";
   }
 
   h1 {
+    grid-area: h1;
     font-size: 50px;
     span {
       color: $second-color;
     }
   }
+
+  .video-responsive {
+    grid-area: video;
+    overflow: hidden;
+    position: relative;
+    width:100%;
+    min-width: 560;
+    &::after {
+      padding-top: 56.25%;
+      display: block;
+      content: '';
+    }
+    iframe {
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+    }
+  }
+
   ol {
+    grid-area: list;
     font-size: 1.6em;
     > li {
       margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  body.tutorial {
+    section {
+      grid-template-areas:
+        "h1"
+        "video"
+        "list";
+    }
+    .video-responsive {
+      min-width: revert;
+      margin-bottom: 50px;
     }
   }
 }
