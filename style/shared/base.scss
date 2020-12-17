@@ -139,15 +139,19 @@ a,
 a:visited {
   display: inline-block;
   text-decoration: none;
-  color: $main-color;
+  color: $second-color;
   font-family: $text-font;
+  font-weight: bold;
 }
 
 code {
   font-family: $code-font;
   font-size: 1em;
-  color: $main-color;
+  color: $third-color;
   position: relative;
+  background-color: white;
+  padding: 0px 5px 2px 5px;
+  border-radius: 8px;
 }
 
 .btn {
