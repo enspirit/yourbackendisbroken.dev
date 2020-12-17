@@ -27,3 +27,10 @@ clear
 # Banner for current (new) step
 CURRENT_STEP=`git describe --tags`
 .tutorial/banner "$CURRENT_STEP"
+
+# Run step script if gitpod env
+if [ ! -z $GITPOD_REPO_ROOT ]; then
+  if [ -e .tutorial/gitpod-steps/$CURRENT_STEP.sh ]; then
+    .tutorial/gitpod-steps/$CURRENT_STEP.sh
+  fi
+fi
