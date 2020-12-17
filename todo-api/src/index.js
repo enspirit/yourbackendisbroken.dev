@@ -77,8 +77,32 @@ app.get('/todos/:id', (req, res) => {
   }
 });
 
+const ensureValidTodo = (todo, idRequired=true) => {
+  const fields = ["id", "description"];
+  // Check for extra prop
+  for (const p in todo) {
+    if (!fields.includes(p)) {
+      throw new Error(`Invalid Todo: unknown property ${p}`);
+    }
+  }
+  // Check for missing props
+  for (const p of fields) {
+    if (p == "id" && !idRequired) {
+      continue;
+    }
+    if (!todo[p]) {
+      throw new Error(`Invalid Todo: missing property ${p}`);
+    }
+  }
+}
+
 app.post('/todos', (req, res) => {
   const todo = req.body;
+  try {
+    ensureValidTodo(todo, false);
+  } catch (err) {
+    return res.send(400, { err });
+  }
   const id = addTodo(todo);
   res.send(getTodo(id));
 });
