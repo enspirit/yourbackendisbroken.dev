@@ -106,13 +106,23 @@ footer {
     color: $main-color;
     cursor: pointer;
   }
-  .logo {
+  .left {
+    display: flex;
     position: absolute;
     right: 0;
     padding: 19px 20px;
-    svg {
-      width: 30px;
-      fill: white;
+
+    .logo {
+      padding-right: 20px;
+      svg {
+        width: 30px;
+        fill: white;
+      }
+    }
+    .github {
+      img {
+        width: 30px;
+      }
     }
   }
 }
