@@ -22,7 +22,7 @@ body.get-our-help {
     transform: translate(-50%);
     top:0;
     z-index: -1;
-    background: linear-gradient(45deg, #eb008c 35%, #ff6462 70%);
+    background: linear-gradient(45deg, $third-color 35%, $sixth-color 70%);
   }
 
   .card {
@@ -51,7 +51,7 @@ body.get-our-help {
 
     li::before {
       content: "\2014 ";
-      color: #E6068E;
+      color: $third-color;
       padding-right: 10px;
     }
   }

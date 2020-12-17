@@ -14,7 +14,7 @@ body.tutorial {
     top: 0;
     transform: translateX(-50%);
     z-index: -1;
-    background: linear-gradient(45deg, #eb008c 35%, #54e8dd 70%);
+    background: linear-gradient(45deg, $third-color 35%, $second-color 70%);
   }
 
   section {

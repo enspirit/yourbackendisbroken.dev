@@ -46,7 +46,7 @@ body.index {
     right: 0;
     top:0;
     z-index: -1;
-    background: linear-gradient(45deg, #7e3f97 35%, #4d54ff 70%);
+    background: linear-gradient(45deg, $fourth-color 35%, $fifth-color 70%);
   }
 
   .news-letter {
@@ -67,11 +67,11 @@ body.index {
       height: 100%;
       width: 360px;
       background: transparent;
-      color: white;
+      color: $text-color;
     }
-    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: white;
-      opacity: 1; /* Firefox */
+    ::placeholder {
+      color: $text-color;
+      opacity: 1;
     }
 
     .btn {
@@ -89,7 +89,7 @@ body.index {
     a, a:visited {
       height: 20px;
       background-color: initial;
-      color: white;
+      color: $text-color;
       padding: 10px;
     }
     .logo {
@@ -100,7 +100,7 @@ body.index {
       }
       svg {
         width: 30px;
-        fill: white;
+        fill: $text-color;
       }
     }
   }

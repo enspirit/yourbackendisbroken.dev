@@ -67,7 +67,7 @@ footer {
     justify-content: center;
     margin-top: 30px;
     a, a:visited, a:hover {
-      color: white;
+      color: $text-color;
       letter-spacing: initial;
       font-size: 10pt;
     }
@@ -76,7 +76,7 @@ footer {
       padding: 0px 15px;
     }
     p + p {
-      border-left: 1px solid white;
+      border-left: 1px solid $text-color;
     }
   }
 }
@@ -89,7 +89,7 @@ footer {
   padding: 0px 20px;
   text-align: center;
   background-color: $darker-background;
-  color: white;
+  color: $text-color;
   border-bottom-left-radius: 10px;
   font-size: 1.4em;
   z-index: 10; // above pre code blocks
@@ -100,7 +100,7 @@ footer {
     font-family: $text-font;
     padding: 20px 0px;
     margin: 0 10px;
-    color: white;
+    color: $text-color;
     border-bottom: 4px solid transparent;
   }
   > a:hover {
@@ -117,7 +117,7 @@ footer {
       padding-right: 20px;
       svg {
         width: 30px;
-        fill: white;
+        fill: $text-color;
       }
     }
     .github {
@@ -140,7 +140,7 @@ footer {
   @media (max-width: 1023px) {
     border-color: transparent;
     &:before {
-      background-color: white !important;
+      background-color: $text-color !important;
       bottom: 30px !important;
     }
   }
@@ -160,7 +160,7 @@ code {
   font-size: 1em;
   color: $third-color;
   position: relative;
-  background-color: white;
+  background-color: $text-color;
   padding: 0px 5px 2px 5px;
   border-radius: 8px;
 }
@@ -168,7 +168,7 @@ code {
 .btn {
   font-weight: bold;
   background: $main-color;
-  color: white !important;
+  color: $text-color !important;
   border-radius: 30px;
   outline: none;
   transition: background-color var(--transition-delay), color var(--transition-delay);
@@ -180,7 +180,7 @@ code {
   }
   &:hover {
     cursor: pointer;
-    background-color: white;
+    background-color: $text-color;
     color: $main-color !important;
     transition: background-color var(--transition-delay), color var(--transition-delay);
   }
@@ -201,7 +201,7 @@ ul {
 
 input:not([type="submit"]) {
   padding: 10px 15px;
-  background: white;
+  background: $text-color;
   border-radius: 10px;
   border: none;
   &:focus {

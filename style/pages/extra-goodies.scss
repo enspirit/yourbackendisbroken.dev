@@ -13,7 +13,7 @@ body.extra-goodies {
     left: 50%;
     transform: translate(-50%);
     z-index: -1;
-    background: linear-gradient(45deg, #7e3f97 35%, #4d54ff 70%);
+    background: linear-gradient(45deg, $fourth-color 35%, $fifth-color 70%);
   }
 
   section {
@@ -34,7 +34,7 @@ body.extra-goodies {
 
       li::before {
         content: "\2014 ";
-        color: #E6068E;
+        color: $third-color;
         padding-right: 10px;
       }
     }

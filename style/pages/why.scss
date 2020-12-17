@@ -12,19 +12,19 @@ body.why {
     top: -30px;
     left: -100px;
     z-index: -1;
-    background: linear-gradient(45deg, #7e3f97 35%, #4d54ff 70%);
+    background: linear-gradient(45deg, $fourth-color 35%, $fifth-color 70%);
   }
 
   ol {
 
     &.element-right::before {
-      background: linear-gradient(45deg, #eb008c 35%, #ff6462 70%);
+      background: linear-gradient(45deg, $third-color 35%, $sixth-color 70%);
       right: 0;
     }
 
 
     &.element-left::before {
-      background: linear-gradient(45deg, #7e3f97 35%, #4d54ff 70%);
+      background: linear-gradient(45deg, $fourth-color 35%, $fifth-color 70%);
       left: 0;
     }
 

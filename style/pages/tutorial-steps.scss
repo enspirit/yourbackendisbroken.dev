@@ -9,7 +9,7 @@
     right: 0;
     top: 0;
     z-index: -1;
-    background: linear-gradient(45deg, #eb008c 35%, #54e8dd 70%);
+    background: linear-gradient(45deg, $third-color 35%, $second-color 70%);
   }
   padding: 100px 20px;
   display: grid;
@@ -22,7 +22,7 @@
     text-align: left;
     a,
     a:visited {
-      color: white;
+      color: $text-color;
       width: 50%;
       white-space: nowrap;
     }
@@ -91,7 +91,7 @@
     .btn {
       background-color: transparent;
       border: 3px solid transparent;
-      color: white;
+      color: $text-color;
       font-weight: bold;
       padding: 5px 10px;
       margin: 15px;
@@ -99,7 +99,7 @@
       &.prev {
         background-color: $dark-background;
         &:hover {
-          background-color: white;
+          background-color: $text-color;
           color: $dark-background !important;
         }
       }
@@ -156,7 +156,7 @@
   }
 
   pre code {
-    background-color: whitesmoke;
+    background-color: $grey-heading;
     color: $dark-background;
     width: calc(100% - 30px);
     display: inline-block;
@@ -176,7 +176,7 @@
       right: 0;
       top: -1px;
       background-color: lighten($dark-background, 20%);
-      color: white;
+      color: $text-color;
       padding: 3px 6px;
       cursor: pointer;
       border-top-right-radius: 4px;
@@ -260,7 +260,7 @@ body.step-0 {
       }
       li {
         .btn {
-          color: white !important;
+          color: $text-color !important;
           &:hover {
             background-color: transparent;
           }
