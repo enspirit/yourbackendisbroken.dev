@@ -155,19 +155,21 @@
     margin: 15px 0;
     overflow: hidden;
     font-size: 1.25em;
-    &:hover {
-      &:after {
-        content: "Copy";
-        position: absolute;
-        right: 0;
-        top: -1px;
-        background-color: lighten($dark-background, 20%);
-        color: white;
-        padding: 3px 6px;
-        cursor: pointer;
-        border-top-right-radius: 4px;
-        border-bottom-left-radius: 4px;
-      }
+
+    .copy-btn {
+      display: none;
+    }
+    &:hover .copy-btn {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -1px;
+      background-color: lighten($dark-background, 20%);
+      color: white;
+      padding: 3px 6px;
+      cursor: pointer;
+      border-top-right-radius: 4px;
+      border-bottom-left-radius: 4px;
     }
   }
 }
