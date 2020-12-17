@@ -115,7 +115,7 @@
 
   summary {
     font-weight: bold;
-    margin: -.5em -.5em 0;
+    margin: -.5em -.5em .5em -.5em;
     padding: .5em;
     outline: none;
     &:hover {
@@ -133,15 +133,25 @@
     }
   }
 
-  summary {
-    margin-bottom: .5em;
-  }
-
   details {
     padding: 20px;
     border-bottom: 1px solid lighten($dark-background, 25%);
     &:first-of-type {
       border-top: 1px solid lighten($dark-background, 25%);
+    }
+  }
+
+  blockquote {
+    padding: 20px;
+    border: 1px solid lighten($dark-background, 25%);
+    font-weight: bold;
+    padding: .5em;
+    background-color: lighten($dark-background, 33%);
+    border-left: 10px solid lighten($dark-background, 25%);
+    margin: 10px 0;
+    width: calc(100% - 35px);
+    p {
+      margin: 0;
     }
   }
 

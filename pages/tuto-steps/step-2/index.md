@@ -35,6 +35,8 @@ output_schema: |-
   }]
 ```
 
+> If you're doing this tutorial using the docker option you will find the `todo-spec/todos/getAll.yml` file in the `yourbackendisbroken/` folder that you created on [step 0](step-0.html).
+
 2. To ensure we receive 6 Todo items, assert some properties onto the output as shown below:
 
 ```yaml
