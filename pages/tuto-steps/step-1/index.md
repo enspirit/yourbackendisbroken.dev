@@ -42,7 +42,7 @@ a 200 status code.
 
 That's because `webspicy` is a *test* framework, that checks
 whether a web service meets a *specification*. Here it used
-a default specification, that you can see with the `--debug`
+a default specification that you can see with the `--debug`
 flag:
 
 ```bash
