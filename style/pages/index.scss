@@ -49,6 +49,34 @@ body.index {
     background: linear-gradient(45deg, #7e3f97 35%, #4d54ff 70%);
   }
 
+  .news-letter {
+    width: max-content;
+    margin: auto;
+    padding: 20px;
+
+    form {
+      display: flex;
+      width: max-content;
+      background: $darker-background;
+      border-radius: 30px;
+      padding: 5px;
+      padding-left: 10px;
+    }
+    input[type="email"] {
+      height: 100%;
+      width: 360px;
+      background: transparent;
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: white;
+      opacity: 1; /* Firefox */
+    }
+
+    .btn {
+      padding: 15px 30px;
+    }
+  }
+
   .twitter {
     display: flex;
     margin: 27px auto;
@@ -57,12 +85,17 @@ body.index {
     width: max-content;
     padding: 10px 150px;
     a, a:visited {
+      height: 20px;
       background-color: initial;
       color: white;
       padding: 10px;
     }
     .logo {
       margin: auto 0px;
+      a {
+        height: auto;
+        padding: 0px 10px;
+      }
       svg {
         width: 30px;
         fill: white;
