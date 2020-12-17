@@ -31,9 +31,8 @@ COPY .tutorial/entrypoint.sh .tutorial/start-api.sh /
 # Tutorial api & webpages
 RUN mkdir -p /tutorial
 COPY .tutorial/api.js /tutorial/
-COPY .tutorial/index.html .tutorial/logger.html /tutorial/public/
 
 # Copy website
-COPY --from=enspirit/yourbackendisbroken:website /usr/share/nginx/html /tutorial/public/website
+COPY --from=enspirit/yourbackendisbroken:website /usr/share/nginx/html /tutorial/public/
 
 ENTRYPOINT ["/entrypoint.sh"]

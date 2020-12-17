@@ -16,4 +16,4 @@ ports:
     onOpen: ignore
   - name: tutorial
     port: 8080
-    onOpen: open-preview
+    onOpen: ignore
