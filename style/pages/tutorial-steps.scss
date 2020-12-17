@@ -162,6 +162,7 @@
     &:hover .copy-btn {
       display: block;
       position: absolute;
+      border: 1px solid lighten($dark-background, 20%);
       right: 0;
       top: -1px;
       background-color: lighten($dark-background, 20%);
