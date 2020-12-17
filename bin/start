@@ -46,4 +46,10 @@ Go back to your browser, you are ready for "Step 1" of the tutorial.
 https://yourbackendisbroken.dev/tutorial/step-1.html
 
 EOF
+else
+cat <<-EOF
+To make it easier we've already opened the tutorial in the right panel,
+but you might need to resize it.
+
+EOF
 fi
