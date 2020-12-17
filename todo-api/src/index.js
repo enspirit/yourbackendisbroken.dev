@@ -69,7 +69,12 @@ app.get('/todos', (req, res) => {
 });
 
 app.get('/todos/:id', (req, res) => {
-  res.send(getTodo(req.params.id));
+  const found = getTodo(req.params.id);
+  if (found) {
+    res.send(found);
+  } else {
+    res.sendStatus(404);
+  }
 });
 
 app.post('/todos', (req, res) => {
