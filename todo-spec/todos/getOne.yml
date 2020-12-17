@@ -37,3 +37,16 @@ services:
         status: 200
       assert:
         - "pathFD('', id: 6, description: 'Use counter examples')"
+
+  counterexamples:
+
+    - description: |-
+        it fails with a 404 for non existent todo
+      params:
+        id: 9999
+      expected:
+        content_type: text/plain
+        status: 404
+      assert:
+        - match(/Not Found/)
+
