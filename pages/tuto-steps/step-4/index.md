@@ -8,8 +8,8 @@ bin/step 4
 
 ## Summary of earlier steps
 
-In Step 2 and Step 3, we've seen that we can call web services
-and assert some properties on the response headers and output.
+In Step 2 and Step 3, we was that we can call web services
+and assert some properties on both the response headers and output.
 Step 2 contributed a test *example*, and Step 3 a *counterexample*.
 
 We can now execute the entire test suite and see that it now
@@ -21,18 +21,18 @@ webspicy todo-spec
 
 ## Examples and POST-conditions ; counterexamples and PRE-conditions
 
-In both steps we've added a test case and some assertions but
+In both steps we added a test case and some assertions but
 there is a major difference between them:
 
-- The example added in Step 2 tests an happy path. The
+- The example added in Step 2 tests a 'happy path'. The
   test checks that *when everything is ok (with the input)*
   and if the web service is correctly implemented then
   the *result meets all expectations*.
 
 - The counterexample added in Step 3 is a robustness test.
   It checks that *if something is wrong (with the input)*
-  then if the web service is correctly implemented then
-  it detects the situation and *guarantees an exceptional
+  and if the web service is correctly implemented then
+  it detects the situation and *guarantees exceptional
   behavior anyway* instead of failing hard in an unspecified
   way.
 
@@ -46,11 +46,11 @@ Those notions relate to the notion of PRE- and POST- conditions:
 
 With these definitions:
 
-- A webspicy example is a test that checks the *POST* are
-  met if the *PRE* are,
+- A webspicy example is a test that checks the *POST-conditions* are
+  met if the *PRE-conditions* are as well.
 
-- A counterexample is a test that checks that some exceptional *POST*
-  are met if the *PRE* are violated.
+- A counterexample is a test that checks that some exceptional *POST-conditions*
+  are met if the *PRE-conditions* are violated.
 
 ## An explicit specification
 
