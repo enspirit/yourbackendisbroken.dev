@@ -29,6 +29,7 @@ docker run -it \
   -p 8080:8080 \
   -v $PWD/yourbackendisbroken:/ybib \
   --user ${UID}:${GID} \
+  -e YBIB_PWD=${PWD}/yourbackendisbroken \
   enspirit/yourbackendisbroken
 ```
 
