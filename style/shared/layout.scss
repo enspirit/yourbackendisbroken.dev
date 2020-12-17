@@ -4,7 +4,9 @@
   justify-content: space-around;
   align-items: flex-start;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 .left-right-cells > div {
   padding: 20px;
+  flex: 0 0 auto;
 }

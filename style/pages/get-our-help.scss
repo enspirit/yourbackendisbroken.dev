@@ -50,3 +50,11 @@ body.get-our-help {
     }
   }
 }
+
+@media (max-width: 1023px) {
+  body {
+    &.get-our-help .card-1 {
+      top: 0;
+    }
+  }
+}

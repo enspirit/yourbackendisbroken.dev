@@ -5,6 +5,56 @@
   }
   body {
     padding: 0 15px;
+    display: unset;
+    &.index {
+      header {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .twitter {
+        padding: 10px 20px;
+        margin: 20px auto;
+      }
+      section {
+        padding: 20px;
+        > * {
+          margin: 50px 0;
+        }
+      }
+      h1 {
+        font-size: 40pt;
+      }
+    }
+    &.get-our-help {
+      .card {
+        width: 70%;
+        margin-top: 50px;
+      }
+    }
+    &.tutorial {
+      &:before {
+        right: -300;
+      }
+      section {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 50px;
+      }
+    }
+    &.why {
+      &:before {
+        opacity: 0.5;
+      }
+      > section {
+        padding: 0 15px;
+        :before {
+          opacity: 0.5;
+        }
+        // > * {
+        //   background: rgba(0,0,0,20%);
+        // }
+      }
+    }
   }
   nav {
     left: 0;
@@ -27,7 +77,47 @@
   .nomobile {
     display: none;
   }
+  .main-nav,
+  .left-right-cells {
+    flex-wrap: wrap;
+  }
+  .footer {
+    .btn {
+      margin: 50px auto;
+    }
+  }
+  .tutorials {
+    &-main > * {
+      max-width: calc(100vw - 40px);
+      margin: 0 auto !important;
+    }
+  }
 }
+
+@media (max-width: 500px) {
+  .tutorials {
+    &-footer {
+      .btn {
+        &.prev,
+        &.next {
+          visibility: hidden;
+          width: 25px;
+          &:before {
+            font-size: 20pt;
+            visibility: visible;
+            content: ">";
+          }
+        }
+        &.prev {
+          &::before {
+            content: "<";
+          }
+        }
+      }
+    }
+  }
+}
+
 
 @media (min-width: 1024px) {
   header {
