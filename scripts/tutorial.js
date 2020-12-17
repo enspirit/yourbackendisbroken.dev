@@ -56,8 +56,9 @@
   window.rerun = () => {
     const STEP_REGEX = /\/tutorial\/step-(\d+)\.html/;
     const matches = window.location.pathname.match(STEP_REGEX);
+    const IS_GITPOD = window.location.href.indexOf('gitpod') >= 0
     // Actually on a tutorial page
-    if (matches) {
+    if (matches && !IS_GITPOD) {
       hackMarkdownSections();
     }
   };
