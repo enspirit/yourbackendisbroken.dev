@@ -116,6 +116,12 @@
       }
     }
   }
+  body.extra-goodies {
+    &::before {
+      width: 400px;
+      top: 50px;
+    }
+  }
 }
 
 
