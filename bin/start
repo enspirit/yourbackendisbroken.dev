@@ -17,7 +17,7 @@ clear
 
 # Check wether or not we have a docker volume mounted
 HAS_VOLUME_MOUNTED=false
-if [ $DOCKER_ENV == 1 ]; then
+if [ "$DOCKER_ENV" == 1 ]; then
   df -h | grep /ybib > /dev/null 2>&1
   if [ $? == 0 ]; then
     HAS_VOLUME_MOUNTED=true
@@ -32,7 +32,7 @@ logs in /tmp/api.logs
 
 EOF
 
-if [ $HAS_VOLUME_MOUNTED == true ]; then
+if [ "$HAS_VOLUME_MOUNTED" == true ]; then
 cat <<-EOF
 You will find the source code used in this tutorial
 in $YBIB_PWD.
