@@ -44,9 +44,6 @@
     p, li {
       line-height: 1.4;
     }
-    p {
-      margin: 15px 0;
-    }
     em {
       padding: 2px;
       border-bottom: 1px solid $main-color;
@@ -149,7 +146,7 @@
     background-color: lighten($dark-background, 33%);
     border-left: 10px solid lighten($dark-background, 25%);
     margin: 10px 0;
-    width: calc(100% - 35px);
+    width: calc(100% - 70px);
     p {
       margin: 0;
     }
@@ -161,6 +158,7 @@
       background-color: $grey-heading;
       color: $dark-background;
       width: calc(100% - 30px);
+      max-width: calc(100vw - 90px);
       display: inline-block;
       padding: 5px 10px;
       border-radius: 4px;
@@ -219,7 +217,6 @@ body.step-0 {
 
 @media (max-width: 1023px) {
   .tutorials {
-    padding: 50px 0;
     &-footer {
       > * {
         flex: 0 1 auto;

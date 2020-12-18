@@ -68,9 +68,6 @@
         :before {
           opacity: 0.5;
         }
-        // > * {
-        //   background: rgba(0,0,0,20%);
-        // }
       }
     }
   }
@@ -102,12 +99,6 @@
   .footer {
     .btn {
       margin: 50px auto;
-    }
-  }
-  .tutorials {
-    &-main > * {
-      max-width: calc(100vw - 40px);
-      margin: 0 auto !important;
     }
   }
 }
