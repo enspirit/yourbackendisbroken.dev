@@ -115,3 +115,31 @@ body.index {
 
   }
 }
+
+@media (max-width: 1023px) {
+  body.index {
+    section {
+      .news-letter {
+        padding: 0;
+        form {
+          background: unset;
+          border-radius: unset;
+          flex-direction: column;
+          > div:first-of-type {
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            background: #23243B;
+            border-radius: 30px;
+            input[type="email"] {
+              margin: 0;
+              width: unset;
+            }
+          }
+        }
+      }
+      .twitter {
+        padding: 10px 30px;
+      }
+    }
+  }
+}
