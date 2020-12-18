@@ -33,5 +33,5 @@ The following companies contributed to this website:
 * [Klaro](https://klaro.cards), agile project management with cards
 * [Quadrabee](https://quadrabee.com/), devops engineering
 * [Cadenza](https://www.cadenzastudio.es/), recording studio
-* [OnPurpose](https://onpurpose.org/en/), UX experts
-* ...
+* Alice in [OnPurpose](), UX experts
+* [The Search Space](https://thesearch.space), programming podcast
