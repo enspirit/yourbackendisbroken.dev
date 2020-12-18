@@ -21,31 +21,31 @@ webspicy --debug todo-spec/todos/getAll.yml
 
 ## Let's assert some more
 
+> If you're doing this tutorial using the docker option you will find the `todo-spec/todos/getAll.yml` file in the `yourbackendisbroken/` folder that you created on [step 0](step-0.html), that is on your own file system. Alternatively you can change them directly in the container, for instance using `vi`.
+
 We can improve our specification in two ways:
 
 1. We can change the output schema from `Any` to a stricter schema. Let's ensure we receive an actual array of Todo items.
 
-Edit the specification in `todo-spec/todos/getAll.yml` with your favorite editor and change the `output_schema` as follows:
+    Edit the specification in `todo-spec/todos/getAll.yml` with your favorite editor and change the `output_schema` as follows:
 
-```yaml
-output_schema: |-
-  [{
-    id: Integer
-    description: String
-  }]
-```
-
-> If you're doing this tutorial using the docker option you will find the `todo-spec/todos/getAll.yml` file in the `yourbackendisbroken/` folder that you created on [step 0](step-0.html).
+    ```yaml
+    output_schema: |-
+      [{
+        id: Integer
+        description: String
+      }]
+    ```
 
 2. To ensure we receive 6 Todo items, assert some properties onto the output as shown below:
 
-```yaml
-expected:
-  content_type: application/json
-  status: 200
-assert:
-  - size(6)
-```
+    ```yaml
+    expected:
+      content_type: application/json
+      status: 200
+    assert:
+      - size(6)
+    ```
 
 Let's run webspicy again:
 
