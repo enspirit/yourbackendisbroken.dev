@@ -26,12 +26,13 @@ there is a major difference between them:
 
 - The example added in Step 2 tests a 'happy path'. The
   test checks that *when everything is ok (with the input)*
-  and if the web service is correctly implemented then
-  the *result meets all expectations*.
+  (and if the web service is correctly implemented) then
+  the *result meets the specification*, which is tested
+  through all assertions.
 
 - The counterexample added in Step 3 is a robustness test.
   It checks that *if something is wrong (with the input)*
-  and if the web service is correctly implemented then
+  (and if the web service is correctly implemented) then
   it detects the situation and *guarantees exceptional
   behavior anyway* instead of failing hard in an unspecified
   way.
