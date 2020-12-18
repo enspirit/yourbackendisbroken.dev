@@ -19,7 +19,7 @@ body.tutorial {
 
   section {
     margin: auto 15%;
-    height: calc(100vh - 375px);
+    height: calc(100vh - 455px);
     text-align: left;
     padding-top: 100px;
     padding-bottom: 50px;
@@ -65,6 +65,12 @@ body.tutorial {
     padding-top: 50px;
     > li {
       margin-bottom: 5px;
+    }
+  }
+
+  footer {
+    p.button {
+      margin-bottom: 100px;
     }
   }
 }

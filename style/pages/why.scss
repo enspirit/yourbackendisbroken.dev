@@ -48,13 +48,19 @@ body.why {
       margin-bottom: 1em;
     }
     h2 {
-      margin: 1.5em 0 1em;
+      margin: 3.5em 0 1em;
     }
     ol, ul {
       margin: 1em 0;
       > li {
         margin: 0.6em;
       }
+    }
+  }
+
+  footer {
+    p.button {
+      margin-bottom: 100px;
     }
   }
 }

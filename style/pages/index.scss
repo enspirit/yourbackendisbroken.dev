@@ -1,44 +1,4 @@
 body.index {
-  h2 {
-    font-size: 1.2em;
-    font-weight: normal;
-    color: $grey-heading;
-  }
-
-  h1 {
-    font-size: 50pt;
-    margin-bottom: 32pt;
-  }
-
-  header {
-    width: 40%;
-    margin-left: 25%;
-    padding: 0px;
-    padding-top: 140px;
-    text-align: left;
-
-    p.intro {
-      line-height: 28pt;
-    }
-  }
-  p.call-to-action {
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-
-  section {
-    padding: 80px;
-    padding-bottom: 40px;
-    span {
-      font-weight: bold;
-      color: $bold-color;
-    }
-  }
-
-  nav > a.index {
-    @include active-nav;
-  }
 
   &::before {
     content: "";
@@ -53,62 +13,105 @@ body.index {
     background: linear-gradient(45deg, $fourth-color 35%, $fifth-color 70%);
   }
 
-  .news-letter {
-    width: max-content;
-    margin: auto;
-    padding: 20px;
+  nav > a.index {
+    @include active-nav;
+  }
 
-    form {
-      display: flex;
-      width: max-content;
-      background: $darker-background;
-      border-radius: 30px;
-      padding: 5px;
-      padding-left: 10px;
-    }
-    input[type="email"] {
-      height: 100%;
-      width: 360px;
-      background: transparent;
-      color: $text-color;
-    }
-    ::placeholder {
-      color: $text-color;
-      opacity: 1;
+  header {
+    width: 40%;
+    margin-left: 25%;
+    padding: 0px;
+    padding-top: 140px;
+    text-align: left;
+
+    h1 {
+      font-size: 50pt;
+      margin-bottom: 32pt;
     }
 
-    .btn {
-      padding: 15px 30px;
+    h2 {
+      font-size: 1.2em;
+      font-weight: normal;
+      color: $grey-heading;
+    }
+
+    p.intro {
+      line-height: 28pt;
     }
   }
 
-  .twitter {
-    display: flex;
-    margin: 27px auto;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 35px;
-    width: max-content;
-    padding: 10px 150px;
-    a, a:visited {
-      height: 20px;
-      background-color: initial;
-      color: $text-color;
-      padding: 10px;
+  p.call-to-action {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  section {
+    padding: 80px;
+    padding-bottom: 40px;
+
+    span {
+      font-weight: bold;
+      color: $bold-color;
     }
-    .logo {
-      margin: auto 0px;
-      a {
-        height: auto;
-        padding: 0px 10px;
-        &.github {
-          display: none;
+
+    .news-letter {
+      width: max-content;
+      margin: auto;
+      padding: 20px;
+
+      form {
+        display: flex;
+        width: max-content;
+        background: $darker-background;
+        border-radius: 30px;
+        padding: 5px;
+        padding-left: 10px;
+      }
+      input[type="email"] {
+        height: 100%;
+        width: 360px;
+        background: transparent;
+        color: $text-color;
+      }
+      ::placeholder {
+        color: $text-color;
+        opacity: 1;
+      }
+
+      .btn {
+        padding: 15px 30px;
+      }
+    }
+
+    .twitter {
+      display: flex;
+      margin: 27px auto;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 35px;
+      width: max-content;
+      padding: 10px 144px;
+      a, a:visited {
+        height: 20px;
+        background-color: initial;
+        color: $text-color;
+        padding: 10px;
+      }
+      .logo {
+        margin: auto 0px;
+        a {
+          height: auto;
+          padding: 0px 10px;
+          &.github {
+            display: none;
+          }
+        }
+        svg {
+          width: 30px;
+          fill: $text-color;
         }
       }
-      svg {
-        width: 30px;
-        fill: $text-color;
-      }
     }
-  }
 
+  }
 }
