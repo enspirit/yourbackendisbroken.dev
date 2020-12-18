@@ -13,10 +13,15 @@ services:
     Returns the specified todo
 
   input_schema: |-
-    Todo.Ref
+    {
+      id: Integer
+    }
 
   output_schema: |-
-    Todo.Full
+    {
+      id: Integer
+      description: String
+    }
 
   error_schema: |-
     Any
