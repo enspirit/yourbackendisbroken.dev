@@ -1,5 +1,5 @@
-body.extra-goodies {
-  nav > a.extra-goodies {
+body.features {
+  nav > a.features {
     @include active-nav;
   }
   &::before {
@@ -13,11 +13,11 @@ body.extra-goodies {
     left: 50%;
     transform: translate(-50%);
     z-index: -1;
-    background: linear-gradient(45deg, $fourth-color 35%, $fifth-color 70%);
+    background: linear-gradient(45deg, $third-color 35%, $fifth-color 70%);
   }
 
   section {
-    padding: 150px 20px;
+    padding: 100px 20px;
   }
 
   .card {
