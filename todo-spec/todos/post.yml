@@ -1,0 +1,53 @@
+---
+url: |-
+  /todos/
+
+method: |-
+  POST
+
+description: |-
+  Creates a new todo
+
+input_schema: |-
+  Todo.Create
+
+output_schema: |-
+  Todo.Full
+
+error_schema: |-
+  Any
+
+preconditions:
+  - The caller should only send valid Todos
+
+postconditions:
+  - If the caller doesn't send valid Todos an error is returned
+
+examples:
+
+  - description: |-
+      when requested
+    params:
+      description: "Use input schemas"
+    expected:
+      content_type: application/json
+      status: 200
+    assert:
+      - "pathFD('', id: 7, description: 'Use input schemas')"
+
+counterexamples:
+
+  - description: |-
+      when requested with wrong input schema
+    dress_params: false
+    params:
+      foobar: 42
+    expected:
+      status: 400
+
+  - description: |-
+      when requested with no input data
+    dress_params: false
+    params: {}
+    expected:
+      status: 400

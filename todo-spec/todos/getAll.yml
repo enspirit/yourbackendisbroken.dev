@@ -12,10 +12,7 @@ input_schema: |-
   Any
 
 output_schema: |-
-  [{
-    id: Integer
-    description: String
-  }]
+  Todo.Collection
 
 error_schema: |-
   Any
