@@ -64,10 +64,11 @@ npm install
 npm start
 ```
 
-Use `webspicy` in another terminal as you progress through the tutorial steps on this website.
-
-You are ready to start the tutorial, just run
+You are ready to start the tutorial, open another terminal and run:
 
 ```bash
+cd yourbackendisbroken.dev
 bin/start
 ```
+
+This second terminal will help you progress through the tutorial steps of this website.
