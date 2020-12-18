@@ -15,6 +15,7 @@ As you can see we have included two counterexamples to ensure that the API is sa
 But is the API properly implemented?
 
 Let's check:
+
 ```bash
 webspicy --debug todo-spec/todos/post.yml
 ```
