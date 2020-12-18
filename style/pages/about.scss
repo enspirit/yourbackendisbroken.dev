@@ -5,6 +5,13 @@ body.about {
     &:first-of-type {
       padding-top: 100;
     }
+    h2 {
+      margin: 1em 0 0;
+    }
+    p {
+      padding: 1em 0;
+      line-height: 1.5;
+    }
   }
   nav > a.about {
     @include active-nav;
