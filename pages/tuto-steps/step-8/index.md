@@ -16,7 +16,7 @@ We have still a lot to show you:
 * How to generate an `openapi` specification to use with Swagger
 * ...
 
-This website and tutorial has been built in a 5 days hackaton in December 2021, and time is clearly over. You can learn more on https://yourbackendisbroken.dev/about.html
+This website and tutorial has been built in a 5 days hackaton in December 2020, and time is clearly over. You can learn more on https://yourbackendisbroken.dev/about.html
 
 ## Contributing & About
 

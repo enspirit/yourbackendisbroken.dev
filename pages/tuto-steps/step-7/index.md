@@ -35,3 +35,5 @@ ROBUST=generated webspicy tuto-steps
 Having generated counterexamples for generic situations help you focussing on the real counterexamples that you need to write: *those that are specific to your business*.
 
 Indeed some PRE-conditions may apply to many web services: think of authentication for instance. Instead of writing counterexamples for them in each specification, you can write your own precondition that will generate counterexamples for each of them.
+
+... but that's for another story... because...
