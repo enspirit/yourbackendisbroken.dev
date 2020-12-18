@@ -5,4 +5,6 @@ Webspicy::Configuration.new(Path.dir) do |c|
   c.before_each do
     Kernel.system 'curl -X POST http://localhost:3000/reset'
   end
+
+  c.precondition Webspicy::Specification::Precondition::RobustToInvalidInput.new
 end
