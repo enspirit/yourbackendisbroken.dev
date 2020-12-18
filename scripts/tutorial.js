@@ -14,6 +14,7 @@
       setTimeout(() => copyBtn.innerText = "Copy", 1000);
       copyBtn.innerText = "Copied :)";
     });
+    elm.hacked = true;
     elm.parentNode.insertBefore(copyBtn, elm.nextSibling);
   }
 
