@@ -17,9 +17,14 @@ body.index {
     padding-top: 140px;
     text-align: left;
 
-    p {
+    p.intro {
       line-height: 28pt;
     }
+  }
+  p.call-to-action {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   section {
@@ -53,7 +58,6 @@ body.index {
     width: max-content;
     margin: auto;
     padding: 20px;
-    margin-top: 40px;
 
     form {
       display: flex;
