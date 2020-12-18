@@ -154,6 +154,7 @@
 
   pre {
     display: flex;
+    position: relative;
     code {
       background-color: $grey-heading;
       color: $dark-background;
@@ -168,9 +169,10 @@
     }
 
     .copy-btn {
-      position: relative;
+      position: absolute;
       height: max-content;
       top: 14px;
+      left: calc(100% - 18px);
       transform: translateX(-100%);
       border: 1px solid lighten($dark-background, 20%);
       background-color: lighten($dark-background, 20%);
