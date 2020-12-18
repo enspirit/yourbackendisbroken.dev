@@ -1,4 +1,9 @@
 body.about {
+  section {
+    &:first-of-type {
+      padding-top: 100;
+    }
+  }
   nav > a.about {
     @include active-nav;
   }
