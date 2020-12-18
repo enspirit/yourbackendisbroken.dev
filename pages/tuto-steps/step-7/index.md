@@ -1,6 +1,6 @@
 # Step 7 - Generated counterexamples
 
-Please make sure your are on step 6 in your terminal by typing:
+Please make sure your are on step 7 in your terminal by typing:
 
 ```bash
 bin/step 7
