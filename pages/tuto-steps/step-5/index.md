@@ -19,7 +19,7 @@ Let's check:
 webspicy --debug todo-spec/todos/post.yml
 ```
 
-See how the two counterexamples tests have failed?
+See how the two counterexample tests have failed?
 This is because the API didn't sanitize the input data and created two Todos with incorrect schemas.
 
 You can see those two incorrect Todos if you call the `GET /todos` endpoint:

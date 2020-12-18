@@ -112,10 +112,10 @@ services:
 ```
 
 In practice, we generally keep conditions about schema and response
-expectations implicit, and only write domain-specific *PRE* and
+expectations implicit and only write domain-specific *PRE* and
 *POST* conditions related to the system state.
 
-Also, writing all tests required to cover the specification may
+Also, writing all the tests required to cover the specification may
 quickly become a daunting task.
 
 We will come back to those points later. For now, let's apply our

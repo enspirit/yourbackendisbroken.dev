@@ -15,7 +15,7 @@ Remember our spec for `GET /todos` ?
 We were expecting the list of todos to have a size of 6.
 That is because the API, when it starts, creates a list of todos (in memory for now) pre-populated with 6 todos.
 
-But now that we have finished our webspicy spec for `POST /todos` that list will change.
+But now that we have finished our webspicy spec for `POST /todos` , that list will change.
 
 Let's do the following: let's test our `GET /todos` then the `POST /todos` and then the `GET /todos again`.
 
@@ -32,7 +32,7 @@ The `GET /todos` test fails because we were expecting 6 todos, but we now have 7
 
 Webspicy allows you to configure hooks that are run before, after & around tests. Here will simply use such a hook to reset the application state before each test.
 
-Make sure your todo-spec/config.rb contains the following, and re-run the tests like here above.
+Make sure your todo-spec/config.rb contains the following, and re-run the tests above.
 
 ```rb
 Webspicy::Configuration.new(Path.dir) do |c|
