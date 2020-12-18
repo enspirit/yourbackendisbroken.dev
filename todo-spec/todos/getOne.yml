@@ -1,47 +1,43 @@
 ---
-name: |-
-  Todo
-
 url: |-
   /todos/{id}
 
-services:
-- method: |-
-    GET
+method: |-
+  GET
 
-  description: |-
-    Returns the specified todo
+description: |-
+  Returns the specified todo
 
-  input_schema: |-
-    Todo.Ref
+input_schema: |-
+  Todo.Ref
 
-  output_schema: |-
-    Todo.Full
+output_schema: |-
+  Todo.Full
 
-  error_schema: |-
-    Any
+error_schema: |-
+  Any
 
-  examples:
+examples:
 
-    - description: |-
-        it returns an existing todo
-      params:
-        id: 6
-      expected:
-        content_type: application/json
-        status: 200
-      assert:
-        - "pathFD('', id: 6, description: 'Use counter examples')"
+  - description: |-
+      it returns an existing todo
+    params:
+      id: 6
+    expected:
+      content_type: application/json
+      status: 200
+    assert:
+      - "pathFD('', id: 6, description: 'Use counter examples')"
 
-  counterexamples:
+counterexamples:
 
-    - description: |-
-        it fails with a 404 for non existent todo
-      params:
-        id: 9999
-      expected:
-        content_type: text/plain
-        status: 404
-      assert:
-        - match(/Not Found/)
+  - description: |-
+      it fails with a 404 for non existent todo
+    params:
+      id: 9999
+    expected:
+      content_type: text/plain
+      status: 404
+    assert:
+      - match(/Not Found/)
 

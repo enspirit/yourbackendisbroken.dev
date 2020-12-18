@@ -1,32 +1,28 @@
 ---
-name: |-
-  Todos
-
 url: |-
   /todos
 
-services:
-- method: |-
-    GET
+method: |-
+  GET
 
-  description: |-
-    Returns the collection of todos
+description: |-
+  Returns the collection of todos
 
-  input_schema: |-
-    Any
+input_schema: |-
+  Any
 
-  output_schema: |-
-    Todo.Collection
+output_schema: |-
+  Todo.Collection
 
-  error_schema: |-
-    Any
+error_schema: |-
+  Any
 
-  examples:
+examples:
 
-    - description: |-
-        when requested
-      expected:
-        content_type: application/json
-        status: 200
-      assert:
-        - size(6)
+  - description: |-
+      when requested
+    expected:
+      content_type: application/json
+      status: 200
+    assert:
+      - size(6)
