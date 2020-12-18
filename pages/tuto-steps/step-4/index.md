@@ -2,7 +2,7 @@
 
 Please make sure your are on step 4 in your terminal by typing:
 
-```
+```bash
 bin/step 4
 ```
 
@@ -15,7 +15,7 @@ Step 2 contributed a test *example* and Step 3, a *counterexample*.
 The last commit fixes the API to be meet it's specification. We can
 now execute the entire test suite and see that it now passes:
 
-```
+```bash
 webspicy todo-spec
 ```
 
@@ -63,7 +63,6 @@ Writing a more complete specification for `GET /todo/{id}` would look
 like this.
 
 ```yaml
-...
 services:
 - method: |-
     GET

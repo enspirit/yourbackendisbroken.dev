@@ -19,7 +19,7 @@
   }
 
   const hackMarkdownSections = function() {
-    const bashScripts = document.querySelectorAll('.hljs');
+    const bashScripts = document.querySelectorAll('.hljs.language-bash, .hljs.language-rb, .hljs.language-yaml');
     for (let i = 0; i < bashScripts.length; i++) {
       const element = bashScripts[i];
       if (element.hacked) {

@@ -16,7 +16,7 @@ But now that we have finished our webspicy spec for `POST /todos` that list will
 
 Let's do the following: let's test our `GET /todos` then the `POST /todos` and then the `GET /todos again`.
 
-```
+```bash
 webspicy todo-spec/todos/getAll.yml
 # it works
 webspicy todo-spec/todos/post.yml
@@ -52,6 +52,6 @@ end
 
 Once changed, re-run the tests above, or check that the entire test suite passes multiple times in a row:
 
-```
-webspicy todo-step
+```bash
+webspicy todo-spec
 ```
