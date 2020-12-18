@@ -21,9 +21,9 @@ body.tutorial {
     margin: auto 15%;
     height: calc(100vh - 375px);
     text-align: left;
+    padding-top: 100px;
     padding-bottom: 50px;
     display: grid;
-    grid-template-rows: 1f auto;
     grid-template-areas:
       "h1 video"
       "list list";
