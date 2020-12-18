@@ -44,7 +44,7 @@ The third option is to clone the tutorial repository on github. It requires a bi
 First clone the repository from github then install nodejs (for the backend example) and ruby (for `webspicy` itself):
 
 ```bash
-git clone https://github.com/enspirit/yourbackendisbroken.dev
+git clone --branch nodejs-tuto https://github.com/enspirit/yourbackendisbroken.dev.git
 cd yourbackendisbroken.dev
 apt-get install nodejs ruby
 ```
