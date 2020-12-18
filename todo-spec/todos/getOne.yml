@@ -9,15 +9,10 @@ description: |-
   Returns the specified todo
 
 input_schema: |-
-  {
-    id: Integer
-  }
+  Todo.Ref
 
 output_schema: |-
-  {
-    id: Integer
-    description: String
-  }
+  Todo.Full
 
 error_schema: |-
   Any
