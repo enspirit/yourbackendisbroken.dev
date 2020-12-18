@@ -15,7 +15,7 @@ ENV RUBYOPT="-W0"
 
 # Install tutorial (& todos-api's)
 WORKDIR /opt/node_deps/
-COPY .tutorial/package.json ./
+COPY todo-api/package.json ./
 RUN npm install
 ENV NODE_PATH="/opt/node_deps/node_modules/"
 ENV PATH="$PATH:/opt/node_deps/node_modules/.bin"
