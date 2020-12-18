@@ -21,11 +21,8 @@ site/extra-goodies.html: pages/extra-goodies.html $(shell find pages/partials -t
 site/why.html: pages/why.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
 	bundle exec ruby bin/i pages/why.html > site/why.html
 
-site/terms-of-use.html: pages/terms-of-use.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
-	bundle exec ruby bin/i pages/terms-of-use.html > site/terms-of-use.html
-
-site/privacy-policy.html: pages/privacy-policy.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
-	bundle exec ruby bin/i pages/privacy-policy.html > site/privacy-policy.html
+site/about.html: pages/about.html $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
+	bundle exec ruby bin/i pages/about.html > site/about.html
 
 site/tutorial:
 	mkdir -p site/tutorial
@@ -51,7 +48,7 @@ site/tutorial/step-5.html: pages/tutorial/step-5.html pages/tuto-steps/step-5/in
 site/tutorial/step-6.html: pages/tutorial/step-6.html pages/tuto-steps/step-6/index.html site/tutorial $(shell find pages/partials -type f) $(shell find pages/layouts -type f)
 	bundle exec ruby bin/i pages/tutorial/step-6.html > site/tutorial/step-6.html
 
-html: site/index.html site/features.html site/get-our-help.html site/tutorial.html site/extra-goodies.html site/why.html site/terms-of-use.html site/privacy-policy.html site/tutorial/step-0.html site/tutorial/step-1.html site/tutorial/step-2.html site/tutorial/step-3.html site/tutorial/step-4.html site/tutorial/step-5.html site/tutorial/step-6.html
+html: site/index.html site/features.html site/get-our-help.html site/tutorial.html site/extra-goodies.html site/why.html site/about.html site/tutorial/step-0.html site/tutorial/step-1.html site/tutorial/step-2.html site/tutorial/step-3.html site/tutorial/step-4.html site/tutorial/step-5.html site/tutorial/step-6.html
 
 site/index.css: $(shell find style -type f | grep -v ".DS_Store")
 	sass style/index.scss > site/index.css
