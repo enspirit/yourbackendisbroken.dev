@@ -2,7 +2,7 @@
 
 git checkout step-1
 clear
-.tutorial/banner "webspicy"
+cat .tutorial/banners/webspicy.txt
 
 echo "Waiting for API to start..."
 timeout 10 bash -c 'until printf "" 2>>/dev/null >>/dev/tcp/$0/$1; do sleep 1; done' localhost 3000
@@ -13,7 +13,7 @@ if [ $? -gt 0 ]; then
 fi
 
 clear
-.tutorial/banner "webspicy"
+cat .tutorial/banners/webspicy.txt
 
 # Check wether or not we have a docker volume mounted
 HAS_VOLUME_MOUNTED=false
