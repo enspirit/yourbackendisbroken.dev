@@ -155,32 +155,37 @@
     }
   }
 
-  pre code {
-    background-color: $grey-heading;
-    color: $dark-background;
-    width: calc(100% - 30px);
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 4px;
-    margin: 15px 0;
-    overflow: hidden;
-    font-size: 1.25em;
+  pre {
+    display: flex;
+    code {
+      background-color: $grey-heading;
+      color: $dark-background;
+      width: calc(100% - 30px);
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin: 15px 0;
+      overflow: hidden;
+      font-size: 1.25em;
+    }
 
     .copy-btn {
-      display: none;
-    }
-    &:hover .copy-btn {
-      display: block;
-      position: absolute;
+      position: relative;
+      height: max-content;
+      top: 14px;
+      transform: translateX(-100%);
       border: 1px solid lighten($dark-background, 20%);
-      right: 0;
-      top: -1px;
       background-color: lighten($dark-background, 20%);
       color: $text-color;
       padding: 3px 6px;
       cursor: pointer;
       border-top-right-radius: 4px;
       border-bottom-left-radius: 4px;
+
+      &:hover {
+        border: 1px solid lighten($dark-background, 10%);
+        background-color: lighten($dark-background, 10%);
+      }
     }
   }
 }
