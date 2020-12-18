@@ -1,0 +1,21 @@
+{
+  "name": "enspirit-hackaton-dec-2020-nodejs",
+  "description": "PoC Dec. 2020 - NodeJS version of the API",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "supervisor src/index.js",
+    "start:frontail": "supervisor src/index.js | tee /tmp/api.logs | frontail - --url-path /frontail --disable-usage-stats"
+  },
+  "author": "Louis Lambeau <llambeau@quadrabee.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "frontail": "^4.9.1",
+    "supervisor": "^0.12.0",
+    "http-proxy-middleware": "^1.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
