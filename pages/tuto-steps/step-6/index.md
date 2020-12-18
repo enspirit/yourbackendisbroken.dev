@@ -27,9 +27,9 @@ webspicy todo-spec/todos/getAll.yml
 
 The `GET /todos` test fails because we were expecting 6 todos, but we now have 7.
 
-## Blackbox testing & Application state
+## Black-box testing & Application state
 
-Functional blackbox testing requires some control over the application state. Indeed the PRE and POST-conditions, as well as all assertions, are about the system state reached after the web service has been executed in a known initial state.
+Functional black-box testing requires some control over the application state. Indeed the PRE and POST-conditions, as well as all assertions, are about the system state reached after the web service has been executed in a known initial state.
 
 There are different ways to control the initial state using `webspicy`, but we will cover only one here: hooks.
 
