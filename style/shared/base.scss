@@ -114,7 +114,9 @@ footer {
     padding: 19px 20px;
 
     .logo {
-      padding-right: 20px;
+      > * {
+        padding-left: 20px;
+      }
       svg {
         width: 30px;
         fill: $text-color;
@@ -233,4 +235,80 @@ input:not([type="submit"]) {
   footer {
     grid-area: footer;
   }
+
+  .main-nav {
+    > a {
+      display: none;
+    }
+    .left {
+      top: 0;
+    }
+  }
+
+  .menu-icon {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: 0.5s ease;
+    height: 25px;
+    z-index: 20; // above main-nav
+    &:hover .bar {
+      box-shadow: 1px 1px 7px 1px RGBa(0, 0, 0, 0.3);
+    }
+    .bar {
+      width: 35px;
+      height: 5px;
+      background: #fff;
+      box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.4);
+      border-radius: 2px;
+      transition: 0.4s ease;
+      &:not(:first-child) {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  #toggle-main-nav {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+  }
+
+  #toggle-main-nav:checked + .menu-icon {
+    transform: translate(-50%,-50%) rotatey(180deg);
+    .bar {
+      transform: rotatey(180deg) rotatex(360deg);
+      &:first-child {
+        transform: rotate(-45deg);
+        margin-top: 10px;
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        margin-top: -15px;
+        transform: rotate(45deg);
+      }
+    }
+
+    + .main-nav {
+      height: 100vh;
+      width: calc(100vw + 5px);
+      margin-left: -20px;
+      padding: 0;
+      background: $dark-background;
+      opacity: 0.8;
+      display: flex;
+      flex-direction: column;
+      > a {
+        display: inline;
+      }
+      .left {
+        right: 15px;
+      }
+    }
+  }
+
 }

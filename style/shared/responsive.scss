@@ -2,8 +2,6 @@
   html,
   body {
     font-size: 14px;
-  }
-  body {
     padding: 0 15px;
     display: unset;
     &.index {
@@ -55,7 +53,6 @@
       section {
         width: 80%;
         margin: 0 auto;
-        padding-top: 50px;
         padding-bottom: 50px;
       }
     }
@@ -64,7 +61,6 @@
         opacity: 0.5;
       }
       > section {
-        padding: 0 15px;
         :before {
           opacity: 0.5;
         }
@@ -74,6 +70,9 @@
   nav {
     left: 0;
     opacity: 0.9;
+    + section {
+      padding-top: 100px;
+    }
   }
   header {
     padding: 100px 0;
@@ -135,6 +134,9 @@
 
 
 @media (min-width: 1024px) {
+  .nodesktop {
+    display: none;
+  }
   header {
     padding: 300px 0 250px 0;
   }
