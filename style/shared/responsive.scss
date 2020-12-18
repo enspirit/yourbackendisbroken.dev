@@ -62,10 +62,17 @@
     &.why {
       &:before {
         opacity: 0.5;
+        width: 100vw;
       }
       > section {
         :before {
           opacity: 0.5;
+        }
+      }
+      ol {
+        &:before {
+          width: 100vw;
+          left: 0;
         }
       }
     }
