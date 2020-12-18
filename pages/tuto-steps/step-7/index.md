@@ -27,7 +27,7 @@ The last commit changed the `config.rb` file to install a reusable `RobustToInva
 In practice, this gives you generated robustness tests for free. Try this:
 
 ```bash
-ROBUST=generated webspicy tuto-steps
+ROBUST=generated webspicy --debug todo-spec
 ```
 
 ## Your own generated counterexamples
