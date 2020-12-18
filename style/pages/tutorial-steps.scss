@@ -200,21 +200,6 @@ footer.tutorials-footer {
   margin-top: 30;
 }
 
-body.step-0 {
-  .tutorials {
-    &-footer {
-      &::before {
-        width: calc(100% + 30px);
-      }
-      .prev {
-        pointer-events: none;
-        background-color: lighten($dark-background, 20%);
-        opacity: .5;
-      }
-    }
-  }
-}
-
 @media (max-width: 1023px) {
   .tutorials {
     &-footer {

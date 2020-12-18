@@ -1,13 +1,10 @@
-body.step-0 {
-  .tutorial-nav a.step-0 {
+body.step-8 {
+  .tutorial-nav a.step-8 {
     @include active-nav-tuto;
   }
   .tutorials {
     &-footer {
-      &::before {
-        width: calc(100% + 30px);
-      }
-      .prev {
+      .next {
         pointer-events: none;
         background-color: lighten($dark-background, 20%);
         opacity: .5;
