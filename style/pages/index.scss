@@ -35,8 +35,7 @@ body.index {
       color: $bold-color;
     }
   }
-}
-body.index {
+
   nav > a.index {
     @include active-nav;
   }
@@ -101,6 +100,9 @@ body.index {
       a {
         height: auto;
         padding: 0px 10px;
+        &.github {
+          display: none;
+        }
       }
       svg {
         width: 30px;
