@@ -64,6 +64,7 @@ site/assets:
 	mkdir -p site/assets
 	cat assets/circle.svg > site/assets/circle.svg
 	cat assets/GitHub-Mark-Light-64px.png > site/assets/GitHub-Mark-Light-64px.png
+	cat assets/ogimage.jpg > site/assets/ogimage.jpg
 
 site: site/tutorial html site/index.css site/assets site/scripts
 all: site
