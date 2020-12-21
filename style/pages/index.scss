@@ -63,12 +63,14 @@ body.index {
       form {
         display: flex;
         width: max-content;
+        height: max-content;
         background: $darker-background;
         border-radius: 30px;
         padding: 5px;
         padding-left: 10px;
       }
       input[type="email"] {
+        -webkit-appearance: none;
         height: 100%;
         width: 360px;
         background: transparent;
@@ -80,7 +82,8 @@ body.index {
       }
 
       .btn {
-        padding: 15px 30px;
+        -webkit-appearance: none;
+        padding: 10px 30px;
       }
     }
 
