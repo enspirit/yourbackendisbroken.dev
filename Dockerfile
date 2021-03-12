@@ -1,4 +1,4 @@
-FROM enspirit/webspicy
+FROM enspirit/webspicy:0.20
 
 ##
 ARG YBIB_REPO
@@ -8,7 +8,7 @@ ENV YBIB_REPO=${YBIB_REPO}
 ENV DOCKER_ENV=1
 ENV VERSION=0.1
 ##
-RUN apk add --no-cache bash git curl supervisor netcat-openbsd nodejs nodejs-npm vim
+RUN apk add --no-cache bash git curl supervisor netcat-openbsd nodejs nodejs-npm vim openssh
 
 # disable warnings in ruby
 ENV RUBYOPT="-W0"

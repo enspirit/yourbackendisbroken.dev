@@ -5,7 +5,7 @@ UID := $(shell id -u)
 GID := $(shell id -g)
 
 image:
-	docker pull enspirit/webspicy
+	docker pull enspirit/webspicy:0.20
 	docker build -t enspirit/yourbackendisbroken . \
 		--build-arg YBIB_REPO=${YBIB_REPO} \
 		--build-arg YBIB_BRANCH=${YBIB_BRANCH}
