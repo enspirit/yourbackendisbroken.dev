@@ -2,7 +2,7 @@
 
 Whilst continuously worked on software for many years, we've come to the conclusion that many teams could improve the quality of their software through better design and black-box testing of backend components.
 
-This repository contains the source code of https://yourbackendisbroken.deb/, both the website and the tutorial.
+This repository contains the source code of https://yourbackendisbroken.dev/, both the website and the tutorial.
 
 The black-box testing technology `webspicy` is hosted at https://github.com/enspirit/webspicy
 
